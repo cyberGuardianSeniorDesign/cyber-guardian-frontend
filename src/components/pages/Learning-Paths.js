@@ -1,6 +1,15 @@
 import React from 'react'
 import '../../App.css'
+import LearningPathCards from '../cards/LearningPathCards';
+import Footer from '../Footer';
 
-export default function LearningPaths(){
-    return <h1 className="learning-paths">LEARNING-PATHS</h1>
+function LearningPaths() {
+    return (
+        <>
+            <LearningPathCards />
+            <Footer />
+        </>
+    );
 }
+
+export default LearningPaths;
