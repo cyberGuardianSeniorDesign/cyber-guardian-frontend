@@ -6,21 +6,6 @@ import './Footer.css';
 function Footer() {
   return (
     <div className='footer-container'>
-        {/* <section className="footer">
-            <p className="footer-heading">
-                Test test testy test
-            </p>
-            <p className="footer-text">
-                This is also a test.
-            </p>
-            <div className="input-areas">
-                <form>
-                    <input type="email" name="email" placeholder="Your email"
-                    className="footer-input" />
-                    <Button buttonStyle={'btn--outline'}>TESTT34</Button>
-                </form>
-            </div>
-        </section> */}
         <div className="footer-links">
             <div className="footer-link-wrapper">
                 <div class="footer-link-items">

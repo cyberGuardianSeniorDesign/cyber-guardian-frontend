@@ -1,6 +1,15 @@
-import React from 'react'
-import '../../App.css'
+import React from 'react';
+import '../../App.css';
+import ArticleCards from '../ArticleCards';
+import Footer from '../Footer';
 
-export default function Articles(){
-    return <h1 className="articles">ARTICLES</h1>
+function Articles(){
+    return( 
+        <>
+            <ArticleCards />
+            <Footer />
+        </>
+    );    
 }
+
+export default Articles;
