@@ -10,19 +10,19 @@ function LearningPathCards() {
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
                     <CardItem 
-                    src='images/img-6.png'
+                    src='images/img-novice.png'
                     text='For those who are unfamiliar with technology'
                     label='NOVICE'
                     path='/learning-paths'
                     />
                     <CardItem 
-                    src='images/img-5.png'
+                    src='images/img-apprentice.png'
                     text='For those who are familiar with technology'
                     label='APPRENTICE'
                     path='/learning-paths'
                     />
                     <CardItem 
-                    src='images/img-4.png'
+                    src='images/img-expert.png'
                     text='For those who are well-versed in technology'
                     label='EXPERT'
                     path='/learning-paths'
