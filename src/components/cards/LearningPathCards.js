@@ -26,6 +26,7 @@ function LearningPathCards() {
                     text='For those who are well-versed in technology'
                     label='EXPERT'
                     path='/learning-paths'
+                    
                     />
                 </ul>
             </div>

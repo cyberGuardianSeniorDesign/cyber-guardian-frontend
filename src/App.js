@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -8,22 +8,12 @@ import Articles from './components/pages/Articles';
 import Games from './components/pages/Games';
 
 class App extends Component {
-  
-  constructor(props) {
-    super(props)
-    this.state = { apiResponse: '' }
-  }
 
   callAPI() 
   {
-    fetch('http://localhost:9000/testAPI')
-        .then(res => res.text())
+    fetch('http://localhost:PORT/demo')
+        .then(res => res.json())
         .then(res => this.setState({ apiResponse: res }));
-  }
-
-  componentWillMount() 
-  {
-    this.callAPI();
   }
   
   render(){
@@ -37,7 +27,6 @@ class App extends Component {
         <Route path="/articles" element={<Articles />} />
         <Route path="/games" element={<Games />} />
       </Routes>
-      <p className="App-intro">;{this.state.apiResponse}</p>
     </Router>
     </div>
   );

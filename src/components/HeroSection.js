@@ -7,10 +7,10 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'
-        img src='/img/img-2.jpg' >
+        img src='/img/img-hero.jpg' >
         <h1>WELCOME TO CYBER GUARDIAN</h1>
         <p></p>
-        <div className='hero-btns'>
+        {/* <div className='hero-btns'>
           <Button 
             className='btns' 
             buttonStyle='btn--outline' 
@@ -30,7 +30,7 @@ function HeroSection() {
               GAMES
           </Button>
 
-        </div>
+        </div> */}
     </div>
   );
 }

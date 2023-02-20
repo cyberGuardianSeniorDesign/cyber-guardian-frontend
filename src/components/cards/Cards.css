@@ -1,10 +1,13 @@
 .cards {
     padding: 4rem;
+    
     background: white;
+  
   }
   
   h1 {
     text-align: center;
+    font-style:normal;
   }
   
   .cards__container {
@@ -30,6 +33,8 @@
     max-height: 250px;
     width: auto;
     max-width: 250px;
+    color:black;
+    background-color: blue;
   }
   
   .cards__item__link {
@@ -48,7 +53,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding-top: 67%;
+    padding-top: 75%;
     overflow: hidden;
   }
   
@@ -92,10 +97,11 @@
   
   .cards__item__info {
     padding: 20px 30px 30px;
+    background-color: black;
   }
   
   .cards__item__text {
-    color: black;
+    color: white;
     font-size: 18px;
     line-height: 24px;
   }
