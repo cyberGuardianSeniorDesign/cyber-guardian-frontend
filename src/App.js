@@ -11,7 +11,7 @@ class App extends Component {
 
   callAPI() 
   {
-    fetch('http://localhost:PORT/demo')
+    fetch('http://localhost:5007/demo')
         .then(res => res.json())
         .then(res => this.setState({ apiResponse: res }));
   }

@@ -19,7 +19,7 @@
   }
   
   .cards__wrapper {
-    position: relative;
+    position:relative;
     margin: 50px 0 45px;
   }
   
@@ -50,10 +50,10 @@
   }
   
   .cards__item__pic-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-top: 75%;
+    position:relative;
+    width: auto;
+    height: auto;
+    padding-top: 90%;
     overflow: hidden;
   }
   

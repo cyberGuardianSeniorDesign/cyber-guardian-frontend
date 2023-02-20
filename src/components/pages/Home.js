@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
             <HeroSection />
-            <Cards style={{backgroundColor:'blue'}}/>
+            <Cards />
             <Footer />
         </>
     );
