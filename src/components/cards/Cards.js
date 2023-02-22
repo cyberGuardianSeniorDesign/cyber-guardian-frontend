@@ -1,5 +1,6 @@
 import React from 'react';
 import CardItem from './CardItem';
+// import CardCarousel from './CardCarousel';
 import './Cards.css';
 
 function Cards() {
@@ -10,19 +11,19 @@ function Cards() {
             <div className='cards__wrapper'>
                 <div className='cards__items'>
                     <CardItem 
-                    src='images/img-6.png'
+                    src='images/img-novice.png'
                     text='For those who are unfamiliar with technology'
                     label='NOVICE'
                     path='/learning-paths'
                     />
                     <CardItem 
-                    src='images/img-5.png'
+                    src='images/img-apprentice.png'
                     text='For those who are familiar with technology'
                     label='APPRENTICE'
                     path='/learning-paths'
                     />
                     <CardItem 
-                    src='images/img-4.png'
+                    src='images/img-expert.png'
                     text='For those who are well-versed in technology'
                     label='EXPERT'
                     path='/learning-paths'
@@ -34,22 +35,22 @@ function Cards() {
         <div className='cards__container'>
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
-                    <CardItem 
-                    src='images/img-1.jpg'
+                    <CardItem
+                    src='images/img-3.jpg'
                     text='Learn more about [insert topic]'
                     label='[Topic]'
                     path='/articles'
                     />
-                    <CardItem 
-                    src='images/img-1.jpg'
+                    <CardItem
+                    src='images/img-4.jpg'
                     text='Learn more about [insert topic]'
                     label='[Topic]'
                     path='/articles'
                     />
-                    <CardItem 
-                    src='images/img-1.jpg'
+                    <CardItem
+                    src='images/img-5.png'
                     text='Learn more about [insert topic]'
-                    label='[TOPIC]'
+                    label='[Topic]'
                     path='/articles'
                     />
                 </ul>
@@ -73,7 +74,7 @@ function Cards() {
                     />
                     <CardItem 
                     src='images/img-13.jpg'
-                    text='Can you find all of the hidden words?'
+                    text='Can you find all of the hidden cyber words?'
                     label='WORD-SEARCH'
                     path='/games'
                     />

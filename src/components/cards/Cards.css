@@ -1,23 +1,25 @@
 .cards {
     padding: 4rem;
-    background: #fff;
+    
+    background: white;
+  
   }
   
   h1 {
     text-align: center;
+    font-style:normal;
   }
   
   .cards__container {
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
     align-items: center;
-    max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
+    margin: auto;
   }
   
   .cards__wrapper {
-    position: relative;
+    position:relative;
     margin: 50px 0 45px;
   }
   
@@ -27,10 +29,12 @@
   }
   
   .cards__item {
-    display: flex;
-    flex: 1;
-    margin: 0 1rem;
-    border-radius: 10px;
+    height: auto;
+    max-height: 250px;
+    width: auto;
+    max-width: 250px;
+    color:black;
+    background-color: blue;
   }
   
   .cards__item__link {
@@ -46,9 +50,10 @@
   }
   
   .cards__item__pic-wrap {
-    position: relative;
+    position:relative;
     width: 100%;
-    padding-top: 67%;
+    height: 100%;
+    padding-top: 90%;
     overflow: hidden;
   }
   
@@ -72,12 +77,12 @@
   }
   
   .cards__item__img {
-    position: absolute;
+    position:absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    display: block;
+    display:inline-block;
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -92,10 +97,13 @@
   
   .cards__item__info {
     padding: 20px 30px 30px;
+    width: 350px;
+    height: 100px;
+    background-color: black;
   }
   
   .cards__item__text {
-    color: black;
+    color: white;
     font-size: 18px;
     line-height: 24px;
   }

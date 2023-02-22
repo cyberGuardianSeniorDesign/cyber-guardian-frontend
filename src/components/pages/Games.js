@@ -1,6 +1,15 @@
 import React from 'react'
 import '../../App.css'
+import GameCards from '../cards/GameCards';
+import Footer from '../Footer';
 
-export default function Games(){
-    return <h1 className="games">GAMES</h1>
+function Games(){
+    return( 
+        <>
+            <GameCards />
+            <Footer />
+        </>
+    );    
 }
+
+export default Games;

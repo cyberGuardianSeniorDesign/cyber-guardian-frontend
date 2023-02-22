@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .home,
@@ -35,7 +35,6 @@
   }
   
   .games {
-    /* background-image: url('/images/img-1.jpg'); */
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;

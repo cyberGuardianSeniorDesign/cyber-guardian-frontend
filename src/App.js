@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -7,10 +7,18 @@ import LearningPaths from './components/pages/Learning-Paths';
 import Articles from './components/pages/Articles';
 import Games from './components/pages/Games';
 
+class App extends Component {
 
-function App() {
+  callAPI() 
+  {
+    fetch('http://localhost:5007/demo')
+        .then(res => res.json())
+        .then(res => this.setState({ apiResponse: res }));
+  }
+  
+  render(){
   return (
-    <>
+    <div>
     <Router>
       <Navbar />
       <Routes>
@@ -20,8 +28,9 @@ function App() {
         <Route path="/games" element={<Games />} />
       </Routes>
     </Router>
-    </>
+    </div>
   );
+}
 }
 
 export default App;
