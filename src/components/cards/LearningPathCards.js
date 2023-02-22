@@ -13,19 +13,19 @@ function LearningPathCards() {
                     src='images/img-novice.png'
                     text='For those who are unfamiliar with technology'
                     label='NOVICE'
-                    path='/learning-paths'
+                    path='/NovicePage'
                     />
                     <CardItem 
                     src='images/img-apprentice.png'
                     text='For those who are familiar with technology'
                     label='APPRENTICE'
-                    path='/learning-paths'
+                    path='/ApprenticePage'
                     />
                     <CardItem 
                     src='images/img-expert.png'
                     text='For those who are well-versed in technology'
                     label='EXPERT'
-                    path='/learning-paths'
+                    path='/ExpertPage'
                     
                     />
                 </ul>
