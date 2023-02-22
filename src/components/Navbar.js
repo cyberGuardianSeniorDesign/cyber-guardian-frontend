@@ -58,7 +58,6 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            {/* {button && <Button buttonStyle='btn--outline'>ADMIN LOGIN</Button>} */}
         </div>
       </nav>
     </>

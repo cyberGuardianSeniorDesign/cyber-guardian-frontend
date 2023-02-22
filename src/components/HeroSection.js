@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
+// import { Button } from './Button';
 import './HeroSection.css';
 
 
 function HeroSection() {
   return (
     <div className='hero-container'
-        img src='/img/img-hero.jpg' >
+        img src='/img/img-home.jpg' >
         <h1>WELCOME TO CYBER GUARDIAN</h1>
-        <p></p>
+        <p> CYBER AWARENESS & INTERNET SAFETY</p>
         {/* <div className='hero-btns'>
           <Button 
             className='btns' 

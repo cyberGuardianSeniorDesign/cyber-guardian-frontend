@@ -1,6 +1,6 @@
 import React from 'react';
 import CardItem from './CardItem';
-import CardCarousel from './CardCarousel';
+// import CardCarousel from './CardCarousel';
 import './Cards.css';
 
 function Cards() {
@@ -74,7 +74,7 @@ function Cards() {
                     />
                     <CardItem 
                     src='images/img-13.jpg'
-                    text='Can you find all of the hidden words?'
+                    text='Can you find all of the hidden cyber words?'
                     label='WORD-SEARCH'
                     path='/games'
                     />

@@ -19,7 +19,7 @@ function GameCards() {
                     src='images/img-12.png'
                     text='A crossword with cyber awarenss terms!'
                     label='CROSSWORD'
-                    path='/games'
+                    path='/CrossWordPage'
                     />
                     <CardItem 
                     src='images/img-13.jpg'

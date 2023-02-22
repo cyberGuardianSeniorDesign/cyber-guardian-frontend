@@ -51,8 +51,8 @@
   
   .cards__item__pic-wrap {
     position:relative;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     padding-top: 90%;
     overflow: hidden;
   }
@@ -97,6 +97,8 @@
   
   .cards__item__info {
     padding: 20px 30px 30px;
+    width: 350px;
+    height: 100px;
     background-color: black;
   }
   
