@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import LearningPaths from './components/pages/Learning-Paths';
 import Articles from './components/pages/Articles';
 import Games from './components/pages/Games';
+import WordSearchPage from './components/pages/WordSearchPage';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
         <Route path="/learning-paths" element={<LearningPaths />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/wordsearchpage" element={<WordSearchPage />} />
       </Routes>
     </Router>
     </div>

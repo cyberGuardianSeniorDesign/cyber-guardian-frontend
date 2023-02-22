@@ -8,7 +8,8 @@
   .home,
   .learning-paths,
   .articles,
-  .games {
+  .games,
+  .wordsearch {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -35,6 +36,14 @@
   }
   
   .games {
+    background-position: center;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .wordsearch {
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;

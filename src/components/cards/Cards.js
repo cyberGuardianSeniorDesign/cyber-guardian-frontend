@@ -14,19 +14,19 @@ function Cards() {
                     src='images/img-novice.png'
                     text='For those who are unfamiliar with technology'
                     label='NOVICE'
-                    path='/learning-paths'
+                    path='/novicepage'
                     />
                     <CardItem 
                     src='images/img-apprentice.png'
                     text='For those who are familiar with technology'
                     label='APPRENTICE'
-                    path='/learning-paths'
+                    path='/apprenticepage'
                     />
                     <CardItem 
                     src='images/img-expert.png'
                     text='For those who are well-versed in technology'
                     label='EXPERT'
-                    path='/learning-paths'
+                    path='/expertpage'
                     />
                 </div>
             </div>
@@ -64,19 +64,19 @@ function Cards() {
                     src='images/img-11.png'
                     text='Can you spot all of the the fishy emails?'
                     label='GO PHISH'
-                    path='/games'
+                    path='/gophishpage'
                     />
                     <CardItem 
                     src='images/img-12.png'
                     text='A crossword with cyber awarenss terms!'
                     label='CROSSWORD'
-                    path='/games'
+                    path='/crosswordpage'
                     />
                     <CardItem 
                     src='images/img-13.jpg'
                     text='Can you find all of the hidden cyber words?'
                     label='WORD-SEARCH'
-                    path='/games'
+                    path='/wordsearchpage'
                     />
                 </ul>
             </div>

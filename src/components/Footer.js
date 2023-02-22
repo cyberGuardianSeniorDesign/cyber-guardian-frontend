@@ -9,9 +9,9 @@ function Footer() {
             <div className="footer-link-wrapper">
                 <div class="footer-link-items">
                     <h2>Learning Paths</h2>
-                    <Link to='/learning-paths'>Novice</Link>
-                    <Link to='/learning-paths'>Apprentice</Link>
-                    <Link to='/learning-paths'>Expert</Link>
+                    <Link to='/novicepage'>Novice</Link>
+                    <Link to='/apprenticepage'>Apprentice</Link>
+                    <Link to='/expertpage'>Expert</Link>
                 </div>
             </div>
 
@@ -27,9 +27,9 @@ function Footer() {
             <div className="footer-link-wrapper">
                 <div class="footer-link-items">
                     <h2>Games</h2>
-                    <Link to='/games'>Game 1</Link>
-                    <Link to='/games'>Game 2</Link>
-                    <Link to='/games'>Game 3</Link>
+                    <Link to='/gophishpage'>Go Phish</Link>
+                    <Link to='/crosswordpage'>Cross-word</Link>
+                    <Link to='/wordsearchpage'>WordSearch</Link>
                 </div>
             </div>
         </div>
