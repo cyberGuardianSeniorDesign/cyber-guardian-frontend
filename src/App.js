@@ -7,17 +7,19 @@ import LearningPaths from './components/pages/Learning-Paths';
 import Articles from './components/pages/Articles';
 import Games from './components/pages/Games';
 import WordSearchPage from './components/pages/WordSearchPage';
+import axios from 'axios';
 
-class App extends Component {
+function App(){
 
-  callAPI() 
-  {
-    fetch('http://localhost:5007/demo')
-        .then(res => res.json())
-        .then(res => this.setState({ apiResponse: res }));
-  }
-  
-  render(){
+  React.useEffect(() => {
+    const callApi = async() => {
+      await axios.get('http://localhost:5007/articles')
+      .then(res => console.log(res))
+    }
+
+    callApi()
+  })
+
   return (
     <div>
     <Router>
@@ -32,7 +34,6 @@ class App extends Component {
     </Router>
     </div>
   );
-}
 }
 
 export default App;
