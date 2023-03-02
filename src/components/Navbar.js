@@ -57,6 +57,11 @@ function Navbar() {
                   Games
                 </Link>
               </li>
+              <li className='nav-item'>
+                <Link to='/checklists' className='nav-links' onClick={closeMobileMenu}>
+                  Checklists
+                </Link>
+              </li>
             </ul>
         </div>
       </nav>

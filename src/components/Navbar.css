@@ -37,8 +37,8 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 50px;
     list-style: none;
     text-align: center;
     width: 60vw;
@@ -54,9 +54,9 @@
     color: #fff;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    align-items: center;
+    align-items:center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: none;
     height: 100%;
   }
   

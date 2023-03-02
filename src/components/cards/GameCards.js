@@ -10,7 +10,7 @@ function GameCards() {
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
                 <CardItem 
-                    src='images/img-2.png'
+                    src='images/img-11.png'
                     text='Can you spot all of the the fishy emails?'
                     label='GO PHISH'
                     path='/GoPhishPage'

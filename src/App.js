@@ -8,6 +8,7 @@ import Articles from './components/pages/Articles';
 import Games from './components/pages/Games';
 import WordSearchPage from './components/pages/WordSearchPage';
 import axios from 'axios';
+import Checklists from './components/pages/Checklists';
 
 function App(){
 
@@ -29,6 +30,7 @@ function App(){
         <Route path="/learning-paths" element={<LearningPaths />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/checklists" element={<Checklists />} />
         <Route path="/wordsearchpage" element={<WordSearchPage />} />
       </Routes>
     </Router>
