@@ -32,6 +32,13 @@ function Footer() {
                     <Link to='/wordsearchpage'>WordSearch</Link>
                 </div>
             </div>
+
+            <div className="footer-link-wrapper">
+                <div class="footer-link-items">
+                    <h2>Checklists</h2>
+                    <Link to='/checklists'>Checklists</Link>
+                </div>
+            </div>
         </div>
 
     </div>

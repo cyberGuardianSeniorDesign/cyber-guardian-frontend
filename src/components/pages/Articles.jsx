@@ -28,7 +28,7 @@ function Articles(){
                     <ul className='cards__items'>
                         {articles.map(article => {
                             return <CardItem 
-                            src='images/img-1.jpg'
+                            src='images/img-3.jpg'
                             text={article.description}
                             label={article.level}
                             path={'/articles/' + article._id}
