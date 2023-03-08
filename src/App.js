@@ -21,6 +21,24 @@ function App(){
     callApi()
   })
 
+  React.useEffect(() => {
+    const callApi = async() => {
+      await axios.get('http://localhost:5007/learning-paths')
+      .then(res => console.log(res))
+    }
+
+    callApi()
+  })
+
+  React.useEffect(() => {
+    const callApi = async() => {
+      await axios.get('http://localhost:5007/checklists')
+      .then(res => console.log(res))
+    }
+
+    callApi()
+  })
+
   return (
     <div>
     <Router>
