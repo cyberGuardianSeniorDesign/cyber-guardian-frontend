@@ -1,12 +1,13 @@
 import React from 'react'
 import '../../App.css'
 import Footer from '../Footer'
-import WSGenerator from '../WordSearch'
+import { Wordsearch } from 'react-wordsearch'
+import 'react-wordsearch/dist/index.css'
 
 function WordSearchPage(){
     return( 
         <>
-            <WSGenerator />
+            <Wordsearch />
             <Footer />
         </>
     );    

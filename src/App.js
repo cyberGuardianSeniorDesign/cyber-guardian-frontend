@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -9,6 +9,8 @@ import Games from './components/pages/Games';
 import WordSearchPage from './components/pages/WordSearchPage';
 import axios from 'axios';
 import Checklists from './components/pages/Checklists';
+import ConstructionPage from './components/pages/ConstructionPage';
+
 
 function App(){
 
@@ -48,6 +50,7 @@ function App(){
         <Route path="/learning-paths" element={<LearningPaths />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/construction-banner" element={<ConstructionPage />} />
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/wordsearchpage" element={<WordSearchPage />} />
       </Routes>
@@ -57,3 +60,4 @@ function App(){
 }
 
 export default App;
+
