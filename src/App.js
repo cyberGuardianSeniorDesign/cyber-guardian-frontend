@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.jsx';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './components/pages/Home';
-import LearningPaths from './components/pages/Learning-Paths';
-import Articles from './components/pages/Articles';
-import Games from './components/pages/Games';
-import WordSearchPage from './components/pages/WordSearchPage';
+import Home from './components/pages/Home.jsx';
+import LearningPaths from './components/pages/Learning-Paths.jsx';
+import Articles from './components/pages/Articles.jsx';
+import Games from './components/pages/Games.jsx';
+//import WordSearchPage from './components/pages/WordSearchPage.jsx';
 import axios from 'axios';
 import Checklists from './components/pages/Checklists';
 import ConstructionPage from './components/pages/ConstructionPage';
 
+import Checklists from './components/pages/Checklists.jsx';
 
+//test pipeline
 function App(){
 
   React.useEffect(() => {
@@ -52,7 +54,7 @@ function App(){
         <Route path="/games" element={<Games />} />
         <Route path="/construction-banner" element={<ConstructionPage />} />
         <Route path="/checklists" element={<Checklists />} />
-        <Route path="/wordsearchpage" element={<WordSearchPage />} />
+        {/* <Route path="/wordsearchpage" element={<WordSearchPage />} /> */}
       </Routes>
     </Router>
     </div>
