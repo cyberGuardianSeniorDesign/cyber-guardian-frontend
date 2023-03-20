@@ -49,7 +49,7 @@ function App(){
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/learning-more" element={<LearnMore />} />
+        <Route path="/learn-more" element={<LearnMore />} />
         <Route path="/learning-paths" element={<LearningPaths />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/games" element={<Games />} />
