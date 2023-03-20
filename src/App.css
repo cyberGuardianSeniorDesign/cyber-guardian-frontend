@@ -10,7 +10,7 @@
   .articles,
   .games,
   .checklists,
-  .wordsearchpage,
+  .wordsearch,
   .construction-banner {
     display: flex;
     height: 90vh;
@@ -53,7 +53,7 @@
     font-size: 100px;
   }
 
-  .wordsearchpage {
+  .wordsearch {
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;

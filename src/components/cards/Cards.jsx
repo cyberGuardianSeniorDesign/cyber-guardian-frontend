@@ -76,7 +76,7 @@ function Cards() {
                     src='images/img-13.jpg'
                     text='Can you find all of the hidden cyber words?'
                     label='WORD-SEARCH'
-                    path='/wordsearchpage'
+                    path='/wordsearch'
                     />
                 </ul>
             </div>
