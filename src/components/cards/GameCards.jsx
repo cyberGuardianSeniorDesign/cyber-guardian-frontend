@@ -13,14 +13,14 @@ function GameCards() {
                     src='images/img-11.png'
                     text='Can you spot all of the the fishy emails?'
                     label='GO PHISH'
-                    path='/Construction'
+                    path='/gophishpage'
                     />
                     
                     <CardItem 
                     src='images/img-12.png'
                     text='A crossword with cyber awarenss terms!'
                     label='CROSSWORD'
-                    path='/Construction'
+                    path='/crosswordpage'
                     />
                     <CardItem 
                     src='images/img-13.jpg'
