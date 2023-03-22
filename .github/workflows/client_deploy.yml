@@ -16,7 +16,7 @@ jobs:
 
           script: |
             cd ~/test
-            ssh-keyscan -H ${{ secrets.CLIENT_HOST }} > ~/.ssh/known_hosts # gather SSH public keys from servers
+            ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts # gather SSH public keys from servers
             rm -r cyber-guardian-frontend
             echo 'Deleted old folder'
             # git clone frontend:cyberGuardianSeniorDesign@cyber-guardian-frontend.git
