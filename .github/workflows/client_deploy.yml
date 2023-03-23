@@ -7,25 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH into frontend
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@master, oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           host: ${{ secrets.SSH_HOST }} # server IP address
           key: ${{ secrets.SSH_KEY }} # key for server
           username: ${{ secrets.SSH_USERNAME }} # username for server
+          name: '${{ secrets.GIT_NAME }}' # username for Github to clone
+          token: '${{ secrets.GIT_TOKEN }}' #user token for Github to clone
           # passphrase: ${{ secrets.CLIENT_PASSPHRASE }} # passphrase for client side
-
 
           script: |
             cd ~/test/cyber-guardian-frontend
             ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts # gather SSH public keys from servers
-            
-      - name: Deploy to client
-        uses: oleksiyrudenko/gha-git-credentials@v2-latest
-        with:
-          name: '${{ secrets.GIT_NAME }}' # username for Github to clone
-          token: '${{ secrets.GIT_TOKEN }}' #user token for Github to clone
-
-      - run: |
             cd ~/test/cyber-guardian-frontend
             echo 'CD'd into frontend folder'
             git pull origin
@@ -33,4 +26,5 @@ jobs:
             #rm -r ~/client/*
             #mv -t ~/client/ ~/test/cyber-guardian-frontend/*
             echo 'Moved to correct folder'
-            echo 'Successful deployment to Digital Ocean' 
+            echo 'Successful deployment to Digital Ocean'
+            
