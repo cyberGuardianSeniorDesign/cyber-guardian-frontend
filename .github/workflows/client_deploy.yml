@@ -18,7 +18,7 @@ jobs:
             cd ~/test/cyber-guardian-frontend
             ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts # gather SSH public keys from servers
             cd ~/test/cyber-guardian-frontend
-            echo 'CD'd into frontend folder'
+            echo 'CD into frontend folder'
             git pull origin
             git reset --hard origin
             #rm -r ~/client/*
