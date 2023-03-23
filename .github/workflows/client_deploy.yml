@@ -6,7 +6,7 @@ jobs:
   deploy-to-client:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy app to client
+      - name: SSH into frontend
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }} # server IP address
@@ -14,15 +14,24 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} # username for server
           # passphrase: ${{ secrets.CLIENT_PASSPHRASE }} # passphrase for client side
 
+
           script: |
             cd ~/test
             ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts # gather SSH public keys from servers
             rm -r cyber-guardian-frontend
             echo 'Deleted old folder'
+            
+      - name: Deploy to client
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          name: '${{ secrets.GIT_NAME }}' # username for Github to clone
+          token: '${{ secrets.GIT_TOKEN }}' #user token for Github to clone
+
+          script: |
             # git clone frontend:cyberGuardianSeniorDesign@cyber-guardian-frontend.git
             # git clone https://github.com/cyberGuardianSeniorDesign/cyber-guardian-frontend.git
             git clone git@github.com:cyberGuardianSeniorDesign/cyber-guardian-frontend.git
             #rm -r ~/client/*
             #mv -t ~/client/ ~/test/cyber-guardian-frontend/*
             echo 'Moved to correct folder'
-            echo 'Successful deployment to Digital Ocean'
+            echo 'Successful deployment to Digital Ocean' 
