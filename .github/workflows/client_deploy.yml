@@ -26,6 +26,8 @@ jobs:
           token: '${{ secrets.GIT_TOKEN }}' #user token for Github to clone
 
       - run: |
+            cd ~/test/cyber-guardian-frontend
+            echo 'CD'd into frontend folder'
             git pull origin
             git reset --hard origin
             #rm -r ~/client/*
