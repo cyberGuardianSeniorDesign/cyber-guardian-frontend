@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SSH into frontend
-        uses: appleboy/ssh-action@master, oleksiyrudenko/gha-git-credentials@v2-latest
+        uses: |
+          appleboy/ssh-action@master
+          oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           host: ${{ secrets.SSH_HOST }} # server IP address
           key: ${{ secrets.SSH_KEY }} # key for server
