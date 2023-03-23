@@ -25,7 +25,7 @@ jobs:
           name: '${{ secrets.GIT_NAME }}' # username for Github to clone
           token: '${{ secrets.GIT_TOKEN }}' #user token for Github to clone
 
-          script: |
+          run: |
             git pull origin
             git reset --hard origin
             #rm -r ~/client/*
