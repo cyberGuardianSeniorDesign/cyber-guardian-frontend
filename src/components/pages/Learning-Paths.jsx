@@ -23,20 +23,17 @@ function LearningPaths(){
     return( 
         <>
             {!loading ? 
-            <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className='cards__items'>
+                    <div className='cards__items'>
                         {learningPaths.map(learningPath => {
                             return <CardItem 
                             src='images/img-3.jpg'
-                            text={learningPath.description}
+                            text={learningPath.title}
                             label={learningPath.level}
                             path={'/learning-paths/' + learningPath._id}
                             />
                         })}
-                    </ul>
-                </div>
-            </div>:<h3>Loading...</h3>   
+                    </div>
+           :<h3>Loading...</h3>   
             }
             <Footer />
         </>

@@ -21,30 +21,25 @@
     margin: 50px 0 45px;
   }
   
-  .cards__items {
-    margin-bottom: 24px;
-    list-style: none;
-  }
   
   .cards__item {
-    height: auto;
     max-height: 250px;
-    width: auto;
-    max-width: 250px;
+    min-width: 250px;
     color:black;
     background-color: blue;
+    
   }
   
   .cards__item__link {
     display: flex;
     flex-flow: column;
-    width: 100%;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
+    margin: 3em 1em 0 1em;
   }
   
   .cards__item__pic-wrap {
@@ -96,8 +91,10 @@
   
   .cards__item__info {
     padding: 20px 30px 30px;
-    width: 350px;
+    width: auto;
     height: 100px;
+    max-height: 300px;
+    width: 275px;
     background-color: black;
   }
   
@@ -122,5 +119,12 @@
   @media only screen and (max-width: 1024px) {
     .cards__item {
       margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 798px) {
+
+    .cards__item__info {
+      width: auto;
     }
   }
