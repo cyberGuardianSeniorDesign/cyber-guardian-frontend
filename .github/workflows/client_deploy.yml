@@ -21,8 +21,8 @@ jobs:
             echo 'CD into frontend folder'
             git pull origin
             git reset --hard origin
-            #rm -r ~/client/*
-            #mv -t ~/client/ ~/test/cyber-guardian-frontend/*
+            rm -r ~/client/*
+            mv -t ~/client/ ~/test/cyber-guardian-frontend/*
             echo 'Moved to correct folder'
             echo 'Successful deployment to Digital Ocean'
             
