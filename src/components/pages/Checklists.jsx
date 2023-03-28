@@ -25,16 +25,18 @@ function Checklists(){
             {!loading ? 
             <div className='cards__container'>
                 <div className='cards__wrapper'>
-                    <ul className='cards__items'>
+                    <div className='cards__items'>
                         {checklists.map(checklist => {
                             return <CardItem 
-                            src='images/img-3.jpg'
-                            text={checklist.description}
+                            key={checklist._id}
+                            src={checklist.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + checklist.thumbnail : 'images/img-3.jpg'}
+                            text={checklist.title}
+                            content={checklist}
                             label={checklist.level}
                             path={'/checklists/' + checklist._id}
                             />
                         })}
-                    </ul>
+                    </div>
                 </div>
             </div>:<h3>Loading...</h3>   
             }

@@ -23,19 +23,21 @@ function Articles(){
     return( 
         <>
             {!loading ? 
-            <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className='cards__items'>
+            
+                <div>
+                    <div className='cards__items'>
                         {articles.map(article => {
                             return <CardItem 
-                            src='images/img-3.jpg'
-                            text={article.description}
+                            src={article.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + article.thumbnail : 'images/img-3.jpg'}
+                            key={article._id}
+                            content={article}
+                            text={article.title}
                             label={article.level}
                             path={'/articles/' + article._id}
                             />
                         })}
-                    </ul>
-                </div>
+                    </div>
+                
             </div>:<h3>Loading...</h3>   
             }
             <Footer />

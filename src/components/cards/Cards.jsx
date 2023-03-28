@@ -7,8 +7,7 @@ function Cards() {
   return (
     <div className='cards'>
         <h1>LEARNING PATHS</h1>
-        <div className='cards__container'>
-            <div className='cards__wrapper'>
+        
                 <div className='cards__items'>
                     <CardItem 
                     src='images/img-novice.png'
@@ -29,57 +28,51 @@ function Cards() {
                     path='/expertpage'
                     />
                 </div>
-            </div>
-        </div>
+           
         <h1>ARTICLES</h1>
-        <div className='cards__container'>
-            <div className='cards__wrapper'>
-                <ul className='cards__items'>
-                    <CardItem
-                    src='images/img-3.jpg'
-                    text='Learn more about [insert topic]'
-                    label='[Topic]'
-                    path='/articles'
-                    />
-                    <CardItem
-                    src='images/img-4.jpg'
-                    text='Learn more about [insert topic]'
-                    label='[Topic]'
-                    path='/articles'
-                    />
-                    <CardItem
-                    src='images/img-5.png'
-                    text='Learn more about [insert topic]'
-                    label='[Topic]'
-                    path='/articles'
-                    />
-                </ul>
-            </div>
+       
+        <div className='cards__items'>
+            <CardItem
+            src='images/img-3.jpg'
+            text='Learn more about [insert topic]'
+            label='[Topic]'
+            path='/articles'
+            />
+            <CardItem
+            src='images/img-4.jpg'
+            text='Learn more about [insert topic]'
+            label='[Topic]'
+            path='/articles'
+            />
+            <CardItem
+            src='images/img-5.png'
+            text='Learn more about [insert topic]'
+            label='[Topic]'
+            path='/articles'
+            />
         </div>
+        
         <h1>GAMES</h1>
-        <div className='cards__container'>
-            <div className='cards__wrapper'>
-                <ul className='cards__items'>
-                    <CardItem 
-                    src='images/img-11.png'
-                    text='Can you spot all of the the fishy emails?'
-                    label='GO PHISH'
-                    path='/gophishpage'
-                    />
-                    <CardItem 
-                    src='images/img-12.png'
-                    text='A crossword with cyber awarenss terms!'
-                    label='CROSSWORD'
-                    path='/crosswordpage'
-                    />
-                    <CardItem 
-                    src='images/img-13.jpg'
-                    text='Can you find all of the hidden cyber words?'
-                    label='WORD-SEARCH'
-                    path='/wordsearch'
-                    />
-                </ul>
-            </div>
+    
+        <div className='cards__items'>
+            <CardItem 
+            src='images/img-11.png'
+            text='Can you spot all of the the fishy emails?'
+            label='GO PHISH'
+            path='/gophishpage'
+            />
+            <CardItem 
+            src='images/img-12.png'
+            text='A crossword with cyber awarenss terms!'
+            label='CROSSWORD'
+            path='/crosswordpage'
+            />
+            <CardItem 
+            src='images/img-13.jpg'
+            text='Can you find all of the hidden cyber words?'
+            label='WORD-SEARCH'
+            path='/wordsearch'
+            />
         </div>
     </div>
   )
