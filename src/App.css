@@ -11,7 +11,7 @@
   .games,
   .checklists,
   .wordsearch,
-  .construction-banner {
+  .gophishpage {
     display: flex;
     height: 90vh;
     align-items: center;
@@ -54,14 +54,13 @@
   }
 
   .wordsearch {
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
+    font-family:'Times New Roman', Times, serif;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 30px;
   }
 
-  .construction-banner {
+  .gophishpage {
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
