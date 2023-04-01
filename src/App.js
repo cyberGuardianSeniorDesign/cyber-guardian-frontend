@@ -6,7 +6,7 @@ import Home from './components/pages/Home.jsx';
 import LearningPaths from './components/pages/Learning-Paths.jsx';
 import Articles from './components/pages/Articles.jsx';
 import Games from './components/pages/Games.jsx';
-// import WordSearch from './components/pages/WordSearch.jsx';
+import WordSearch from './components/pages/WordSearch.jsx';
 // import LearnMore from './components/pages/LearnMore.jsx';
 import Checklists from './components/pages/Checklists.jsx';
 import axios from 'axios';
@@ -58,7 +58,7 @@ function App(){
         <Route path="/games" element={<Games />} />
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/checklists/:id" element={<ViewChecklist />} />
-        {/* <Route path="/wordsearch" element={<WordSearch />} /> */}
+        <Route path="/wordsearch" element={<WordSearch />} />
       </Routes>
     </Router>
     </div>

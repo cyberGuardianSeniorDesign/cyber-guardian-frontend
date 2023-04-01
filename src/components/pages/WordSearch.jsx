@@ -6,19 +6,20 @@ import Grid from '../Games/WordSearch/Grid/Grid.js';
 import WordList from '../Games/WordSearch/WordList/WordList.js';
 import Footer from '../Footer.jsx';
 
-export function WordSearch({showWordList}){
+function WordSearch(){
     return( 
         <div>
             <Menu />
             <Grid />
-            {showWordList && <WordList />}s
+            <WordList />
             <Footer />
         </div>
     );
 }
+export default WordSearch;
 
-function mapStateToProps({ settings: { showWordList } }) {
-    return { showWordList };
-  }
+// function mapStateToProps({ settings: { showWordList } }) {
+//     return { showWordList };
+//   }
   
-  export default connect(mapStateToProps, {})(WordSearch);
+//   export default connect(mapStateToProps, {})(WordSearch);
