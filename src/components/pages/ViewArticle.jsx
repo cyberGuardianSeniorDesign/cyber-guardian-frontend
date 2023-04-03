@@ -3,7 +3,11 @@ import axios from 'axios'
 import { Typography } from "@mui/material"
 import { useLocation, useNavigate } from "react-router-dom"
 import Footer from "../Footer"
-
+import draftToHtml from 'draftjs-to-html';
+//import { EditorState, convertToRaw, convertFromRaw, ContentState  } from "draft-js";
+// import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function ViewArticle({dbArticle})
 {
@@ -47,20 +51,19 @@ export default function ViewArticle({dbArticle})
       {!loading ? <div className='view-page'> 
         <h1 className='view-page-title'>{article.title}</h1>
         {article.content.map(content => {
-          if(content.contentType == 'text'){
-            return <div key={content.index}>
-              <h2 className='view-page-h2'>{content.header}</h2> 
-              <p className="view-page-text">{content.text}</p>
-            </div>
-          } else {
-            return  <div key={content.index} className="view-page-img-div">
-            <h4 className="view-page-img-h4">{content.caption}</h4>
+        if(content.contentType == 'text'){
+          let html = draftToHtml(JSON.parse(content.raw))
+          console.log(html)
+          return <div className="article-text-content" key={content.index}>{parse(html)}</div>
+        } else {
+          return <div key={content.index} className="view-page-img-div">
+            <h3 className="view-page-img-h3">{content.caption}</h3>
             <img className="view-page-img" src={"https://storage.googleapis.com/cyber-guardian-images/" + content.text} alt={content.caption}/>
             </div>
-          }
-        })}
+        }
+      })}
 
-      </div>: <h1>Loading...</h1>}
+      </div>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
         <Footer/>
     </div>
 }

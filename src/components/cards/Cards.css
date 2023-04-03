@@ -23,23 +23,24 @@
   
   
   .cards__item {
-    max-height: 250px;
+    height: 250px;
     min-width: 250px;
+    width: 33%;
     color:black;
     background-color: blue;
-    
   }
   
   .cards__item__link {
     display: flex;
     flex-flow: column;
+    width: 300px;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
-    margin: 3em 1em 0 1em;
+    margin: 1em 1em 0 1em;
   }
   
   .cards__item__pic-wrap {
@@ -90,25 +91,20 @@
   }
   
   .cards__item__info {
-    padding: 20px 30px 30px;
-    width: auto;
+    padding: 15px 20px 30px;
     height: 100px;
     max-height: 300px;
-    width: 275px;
+    width: 100%;
     background-color: black;
   }
   
   .cards__item__text {
     color: white;
-    font-size: 18px;
-    line-height: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+    font-size: 14px;
+    line-height: 22px;
   }
   
-  @media only screen and (min-width: 1200px) {
-    .content__blog__container {
-      width: 84%;
-    }
-  }
   
   @media only screen and (min-width: 1024px) {
     .cards__items {

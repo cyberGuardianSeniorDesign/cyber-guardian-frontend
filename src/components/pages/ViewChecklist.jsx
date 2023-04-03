@@ -6,14 +6,14 @@ import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import Footer from "../Footer"
-
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 export default function ViewChecklist({dbChecklist})
 {
     const navigate = useNavigate()
     const { state } = useLocation()
-    const [loading, setLoading] = React.useState(false)
+    const [loading, setLoading] = React.useState(true)
     const [checklist, setChecklist] = React.useState(dbChecklist)
     const [title, setTitle] = React.useState('')
     const [author, setAuthor] = React.useState('')
@@ -22,6 +22,13 @@ export default function ViewChecklist({dbChecklist})
     const [listItems, setListItems] = React.useState([{index: 0, contentType: 'text', text: ''}])
     const [checked, setChecked] = React.useState([0]);
 
+    function printPageArea(areaID){
+      var printContent = document.getElementById(areaID).innerHTML;
+      var originalContent = document.body.innerHTML;
+      document.body.innerHTML = printContent;
+      window.print();
+      document.body.innerHTML = originalContent;
+  }
     React.useEffect(() => {
       const verifyToken = async() => {
               fetch(process.env.BACKEND + "isAdminAuth", {
@@ -53,8 +60,8 @@ export default function ViewChecklist({dbChecklist})
           }
       }
 
-      loadChecklist()
       setLoading(false)
+      loadChecklist()
   }, [])
 
   React.useEffect(() => {
@@ -62,8 +69,8 @@ export default function ViewChecklist({dbChecklist})
   }, [checklist])
 
 
-    return <div className='view-page'>
-        {!loading ? <div>
+    return <div className='view-page' >
+        {!loading ? <div id="printable">
           <h1 className='view-page-title'>{title}</h1>
           <p className="view-page-description">{desc}</p>
           <div className="checklist-view-div">
@@ -83,7 +90,9 @@ export default function ViewChecklist({dbChecklist})
           })}
           </FormGroup>
         </div>
+        
+      </div> : <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
+      <button className="dark-btn" onClick={() => printPageArea("printable")}>Print Checklist</button>
         <Footer />
-      </div> : <h1>Loading...</h1>}
     </div>
 }

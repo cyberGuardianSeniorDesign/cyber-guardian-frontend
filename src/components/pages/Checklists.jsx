@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import CardItem from '../cards/CardItem';
 // import CardCarousel from './CardCarousel';
 import '../cards/Cards.css';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Checklists(){
     const [checklists, setChecklists] = React.useState([])
@@ -38,7 +39,7 @@ function Checklists(){
                         })}
                     </div>
                 </div>
-            </div>:<h3>Loading...</h3>   
+            </div>:<div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>   
             }
             <Footer />
         </>

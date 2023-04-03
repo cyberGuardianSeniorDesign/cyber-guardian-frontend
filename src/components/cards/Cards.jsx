@@ -1,80 +1,115 @@
 import React from 'react';
+import axios from 'axios';
 import CardItem from './CardItem';
+import CircularProgress from '@mui/material/CircularProgress';
 // import CardCarousel from './CardCarousel';
 import './Cards.css';
+import Carousel from "../Carousel.js"
+
+import { render } from '@testing-library/react';
 
 function Cards() {
+  const [loading, setLoading] = React.useState(true)
+    const [learningPaths, setLearningPaths] = React.useState([])
+    const [articles, setArticles] = React.useState([])
+    const [checklistss, setChecklists] = React.useState([])
+    const [games, setGames] = React.useState([])
+    const [show, setShow] = React.useState(3)
+    const getShow = () => {
+      
+    }
+    React.useEffect(() => {
+        const getContent = async() => {
+            await axios.get("http://localhost:5007/" + 'content')
+            .then(res => {
+                console.log(res.data)
+                setLearningPaths(res.data.learningPath)
+                setArticles(res.data.articles)
+                setChecklists(res.data.checklists)
+                setGames(res.data.games)
+            })
+            .then(setLoading(false))
+        }
+
+       getContent() 
+    }, [])
+
+    React.useEffect(() => {
+      const adjustShow = () => {
+        if(window.matchMedia("(min-width: 1000px)").matches){
+          setShow(3)
+        }
+        else if(window.matchMedia("(min-width: 600px)").matches){
+          setShow(2)
+        } 
+        else{
+          setShow(1)
+        }
+      }
+
+      adjustShow()
+    })
   return (
+  <>
+    {!loading ?
     <div className='cards'>
-        <h1>LEARNING PATHS</h1>
-        
-                <div className='cards__items'>
-                    <CardItem 
-                    src='images/img-novice.png'
-                    text='For those who are unfamiliar with technology'
-                    label='NOVICE'
-                    path='/novicepage'
-                    />
-                    <CardItem 
-                    src='images/img-apprentice.png'
-                    text='For those who are familiar with technology'
-                    label='APPRENTICE'
-                    path='/apprenticepage'
-                    />
-                    <CardItem 
-                    src='images/img-expert.png'
-                    text='For those who are well-versed in technology'
-                    label='EXPERT'
-                    path='/expertpage'
-                    />
-                </div>
-           
-        <h1>ARTICLES</h1>
        
-        <div className='cards__items'>
-            <CardItem
-            src='images/img-3.jpg'
-            text='Learn more about [insert topic]'
-            label='[Topic]'
-            path='/articles'
-            />
-            <CardItem
-            src='images/img-4.jpg'
-            text='Learn more about [insert topic]'
-            label='[Topic]'
-            path='/articles'
-            />
-            <CardItem
-            src='images/img-5.png'
-            text='Learn more about [insert topic]'
-            label='[Topic]'
-            path='/articles'
-            />
-        </div>
+        <h1 className='home-content-h1'>LEARNING PATHS</h1>
         
-        <h1>GAMES</h1>
+        <div className="carousel-div" >
+          <Carousel show={show}>
+            {learningPaths.map(path => {
+              return <CardItem 
+              src={path.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + path.thumbnail : 'images/img-3.jpg'}
+              key={path._id}
+              content={path}
+              text={path.title}
+              label={path.level}
+              path={'/learning-paths/' + path._id}
+              />
+            })} 
     
-        <div className='cards__items'>
-            <CardItem 
-            src='images/img-11.png'
-            text='Can you spot all of the the fishy emails?'
-            label='GO PHISH'
-            path='/gophishpage'
+          </Carousel>
+          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
+        </div>
+           
+        <h1 className='home-content-h1'>ARTICLES</h1>
+        <div className="carousel-div">
+         
+        <Carousel show={show}>
+          {articles.map(article => {
+            return <CardItem 
+            src={article.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + article.thumbnail : 'images/img-3.jpg'}
+            key={article._id}
+            content={article}
+            text={article.title}
+            label={article.level}
+            path={'/articles/' + article._id}
             />
-            <CardItem 
-            src='images/img-12.png'
-            text='A crossword with cyber awarenss terms!'
-            label='CROSSWORD'
-            path='/crosswordpage'
-            />
-            <CardItem 
-            src='images/img-13.jpg'
-            text='Can you find all of the hidden cyber words?'
-            label='WORD-SEARCH'
-            path='/wordsearch'
-            />
+          })} 
+        
+        </Carousel>
+          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
+        </div>
+        <h1 className='home-content-h1'>GAMES</h1>
+    
+        <div className="carousel-div" >
+          <Carousel show={show}>
+            {games.map(game => {
+                return <CardItem 
+                src={game.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + game.thumbnail : 'images/img-3.jpg'}
+                key={game._id}
+                content={game}
+                text={game.title}
+                path={'/games/' + game._id}
+                />
+              })} 
+          </Carousel>
+          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
         </div>
     </div>
+    : <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
+   </> 
   )
 }
 
