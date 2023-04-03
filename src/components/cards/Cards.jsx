@@ -89,7 +89,7 @@ function Cards() {
           })} 
         
         </Carousel>
-          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
+          <a className="view-all-link" href="http://localhost:3001/articles">View All</a>
         </div>
         <h1 className='home-content-h1'>GAMES</h1>
     
@@ -105,7 +105,7 @@ function Cards() {
                 />
               })} 
           </Carousel>
-          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
+          <a className="view-all-link" href="http://localhost:3001/games">View All</a>
         </div>
     </div>
     : <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}

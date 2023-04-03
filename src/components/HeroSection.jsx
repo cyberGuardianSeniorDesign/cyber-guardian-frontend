@@ -11,12 +11,6 @@ function HeroSection() {
         <h1>WELCOME TO CYBER GUARDIAN</h1>
         <p> CYBER AWARENESS & INTERNET SAFETY</p>
         <div className='hero-btns'>
-          <Button 
-            className='btns' 
-            buttonStyle='btn--outline' 
-            buttonSize='btn--large'> 
-              LEARN MORE
-          </Button>
           {/* <Button 
             className='btns' 
             buttonStyle='btn--outline' 

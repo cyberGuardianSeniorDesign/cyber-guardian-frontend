@@ -26,6 +26,8 @@ function Articles(){
             {!loading ? 
             
                 <div>
+                    <h1 className='content-h1'>Articles</h1>
+                    <p className='content-description'>Read articles to learn about different cyber security concepts. Learn about how cyber security effects you, about different cyber attacks, and how to protect yourself.</p>
                     <div className='cards__items'>
                         {articles.map(article => {
                             return <CardItem 

@@ -30,15 +30,6 @@ export default function ViewChecklist({dbChecklist})
       document.body.innerHTML = originalContent;
   }
     React.useEffect(() => {
-      const verifyToken = async() => {
-              fetch(process.env.BACKEND + "isAdminAuth", {
-              headers: {
-                  "x-access-token": localStorage.getItem("token")
-              }
-              })
-              .then(res => res.json())
-              .then(data => data.isLoggedIn ? navigate('/checklists/edit/' + checklist._id):navigate('/login'))
-      }
 
       const loadChecklist = () => {
           if(state != undefined || null){
@@ -54,8 +45,6 @@ export default function ViewChecklist({dbChecklist})
               if(data != undefined || null)
               {
                   setChecklist(JSON.parse(data))
-
-                  verifyToken()
               } 
           }
       }
