@@ -12,6 +12,7 @@ import Checklists from './components/pages/Checklists.jsx';
 import axios from 'axios';
 import ViewArticle from './components/pages/ViewArticle.jsx';
 import ViewChecklist from './components/pages/ViewChecklist.jsx';
+import CrosswordPage from './components/pages/CrosswordPage.jsx';
 
 
 
@@ -59,6 +60,7 @@ function App(){
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/checklists/:id" element={<ViewChecklist />} />
         <Route path="/wordsearch" element={<WordSearch />} />
+        <Route path="/crosswordpage" element={<CrosswordPage />} />
       </Routes>
     </Router>
     </div>

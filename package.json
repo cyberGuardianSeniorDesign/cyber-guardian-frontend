@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@jaredreisinger/react-crossword": "^5.2.0",
     "@mui/material": "^5.11.15",
     "@reduxjs/toolkit": "^1.9.3",
     "@sbj42/word-search-generator": "^0.1.2",
