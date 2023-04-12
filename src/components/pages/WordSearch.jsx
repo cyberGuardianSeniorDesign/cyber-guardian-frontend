@@ -24,4 +24,4 @@ export default WordSearch;
 //     return { showWordList };
 //   }
   
-//   export default connect(mapStateToProps, {})(WordSearch);
+//   export default connect(mapStateToProps, {})(WordSearch)
