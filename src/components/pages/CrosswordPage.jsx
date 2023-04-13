@@ -8,33 +8,103 @@ import { columnBreakpoint } from '@jaredreisinger/react-crossword'
 
 const data = {
     across: {
-      1: {
-        clue: 'one plus one',
-        answer: 'TWO',
-        row: 0,
+      3: {
+        clue: 'A memorized secret consisting of a sequence of words or other text that a claimant uses to authenticate their identity.',
+        answer: 'PASSPHRASE',
+        row: 3,
+        col: 4,
+      },
+      4: {
+        clue: 'The loss of confidentiality, integrity, or availability of information, data, or information (or control) systems.',
+        answer: 'RISK',
+        row: 4,
+        col: 13,
+      },
+      6: {
+        clue: 'A way of translating data from plaintext (unencrypted) to ciphertext (encrypted).',
+        answer: 'ENCRYPTION',
+        row: 6,
         col: 0,
+      },
+      8: {
+        clue: 'The fraudulent practice of sending emails or other messages purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.',
+        answer: 'PHISHING',
+        row: 8,
+        col: 0,
+      },
+      9: {
+        clue: 'A patch, upgrade, or other modification to code that corrects security and/or functionality problems in software.',
+        answer: 'UPDATE',
+        row: 9,
+        col: 15,
+      },
+      11: {
+        clue: 'Preserving authorized restrictions on information access and disclosure, including means for protecting personal privacy and proprietary information.',
+        answer: 'CONFIDENTIALITY',
+        row: 11,
+        col: 5,
+      },
+      13: {
+        clue: 'A security feature offered by many websites, applications and devices that dramatically improves account security.',
+        answer: 'MULTIFACTOR',
+        row: 15,
+        col: 8,
+      },
+      15: {
+        clue: 'Ensuring timely and reliable access to and use of information.',
+        answer: 'AVAILABILITY',
+        row: 19,
+        col: 9,
       },
     },
     down: {
-      2: {
-        clue: 'three minus two',
-        answer: 'ONE',
+      1: {
+        clue: 'The state of being protected against the criminal or unauthorized use of electronic data, or the measures taken to achieve this.',
+        answer: 'CYBERSECURITY',
         row: 0,
-        col: 2,
+        col: 13,
+      },
+      2: {
+        clue: 'An ever-evolving form of malware designed to encrypt files on a device, rendering any files and the systems that rely on them unusable.',
+        answer: 'RANSOMWARE',
+        row: 2,
+        col: 11,
+      },
+      5: {
+        clue: 'Any circumstance or event with the potential to adversely impact organizational operations, organizational assets, or individuals through an information system via unauthorized access, destruction, disclosure, modification of information, and/or denial of service.',
+        answer: 'THREAT',
+        row: 4,
+        col: 17,
+      },
+      7: {
+        clue: 'Assurance that the confidentiality of, and access to, certain information about an entity is protected.',
+        answer: 'PRIVACY',
+        row: 6,
+        col: 5,
+      },
+      10: {
+        clue: 'Types of software products which attempt to detect, quarantine and/or block malware from running on devices.',
+        answer: 'ANTIVIRUS',
+        row: 9,
+        col: 16,
+      },
+      12: {
+        clue: 'Guarding against improper information modification or destruction and includes ensuring information non-repudiation and authenticity.',
+        answer: 'INTEGRITY',
+        row: 13,
+        col: 13,
       },
     },
   }
 
 
   const StyledContainer = styled.section.attrs((props) => ({
-    width: props.width || "80%",
+    width: props.width || "100%",
     hasPadding: props.hasPadding || false,
-    height: props.height || "50%",
     
   }))`
     --container-padding: 20px;
     width: ${(props) => props.width}; // Falls back to 100%
-    height: ${(props) => props.height};
     
     padding: ${(props) =>
       (props.hasPadding && "var(--container-padding)") || "none"};
@@ -45,7 +115,7 @@ const data = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    height: '125vh',
   }
 
 function CrosswordPage() {
@@ -53,7 +123,7 @@ function CrosswordPage() {
     return (
       <div>
         <StyledContainer style={styles}>
-        <Crossword data={data} columnBreakpoint={columnBreakpoint = '100px'}/>
+        <Crossword data={data} />
         </StyledContainer>
         <Footer />
       </div>
