@@ -74,7 +74,7 @@ const data = {
         clue: 'Any circumstance or event with the potential to adversely impact organizational operations, organizational assets, or individuals through an information system via unauthorized access, destruction, disclosure, modification of information, and/or denial of service.',
         answer: 'THREAT',
         row: 4,
-        col: 17,
+        col: 19,
       },
       7: {
         clue: 'Assurance that the confidentiality of, and access to, certain information about an entity is protected.',
@@ -86,13 +86,13 @@ const data = {
         clue: 'Types of software products which attempt to detect, quarantine and/or block malware from running on devices.',
         answer: 'ANTIVIRUS',
         row: 9,
-        col: 16,
+        col: 18,
       },
       12: {
         clue: 'Guarding against improper information modification or destruction and includes ensuring information non-repudiation and authenticity.',
         answer: 'INTEGRITY',
         row: 13,
-        col: 13,
+        col: 16,
       },
     },
   }
