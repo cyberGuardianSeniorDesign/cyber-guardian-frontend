@@ -12,7 +12,8 @@ import Checklists from './components/pages/Checklists.jsx';
 import axios from 'axios';
 import ViewArticle from './components/pages/ViewArticle.jsx';
 import ViewChecklist from './components/pages/ViewChecklist.jsx';
-
+import CrosswordPage from './components/pages/CrosswordPage.jsx';
+import GoPhishPage from './components/pages/GoPhishPage.jsx';
 
 
 //test pipeline
@@ -30,7 +31,9 @@ function App(){
         <Route path="/games" element={<Games />} />
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/checklists/:id" element={<ViewChecklist />} />
-        <Route path="/games/word-search" element={<WordSearch />} />
+        <Route path="/wordsearch" element={<WordSearch />} />
+        <Route path="/crosswordpage" element={<CrosswordPage />} />
+        <Route path="/gophishpage" element={<GoPhishPage />} />
       </Routes>
     </Router>
     </div>

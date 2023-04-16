@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@jaredreisinger/react-crossword": "^5.2.0",
     "@mui/material": "^5.11.15",
     "@reduxjs/toolkit": "^1.9.3",
     "@sbj42/word-search-generator": "^0.1.2",
@@ -17,14 +18,16 @@
     "draftjs-to-html": "^0.9.1",
     "html-react-parser": "^3.0.15",
     "react": "^18.2.0",
+    "react-crossword": "^0.2.0",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.2",
+    "react-quizlet-flashcard": "^3.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.2",
     "react-scripts": "^5.0.1",
     "react-wordsearch": "^0.0.10",
     "redux": "^4.2.1",
-    "styled-components": "5.1.1",
+    "styled-components": "^5.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
