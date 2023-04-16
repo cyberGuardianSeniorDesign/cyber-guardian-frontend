@@ -174,7 +174,7 @@
   .article-text-content {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 15px;
-    margin:0 2em 1em 2em;
+    margin:0 .5em 1em .5em;
     overflow-x: hidden;
   }
 

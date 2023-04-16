@@ -17,34 +17,6 @@ import ViewChecklist from './components/pages/ViewChecklist.jsx';
 
 //test pipeline
 function App(){
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/articles')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/learning-paths')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/checklists')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
   return (
     <div>
     <Router>
@@ -58,7 +30,7 @@ function App(){
         <Route path="/games" element={<Games />} />
         <Route path="/checklists" element={<Checklists />} />
         <Route path="/checklists/:id" element={<ViewChecklist />} />
-        <Route path="/wordsearch" element={<WordSearch />} />
+        <Route path="/games/word-search" element={<WordSearch />} />
       </Routes>
     </Router>
     </div>

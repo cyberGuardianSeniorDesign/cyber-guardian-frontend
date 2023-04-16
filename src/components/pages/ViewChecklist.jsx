@@ -20,15 +20,15 @@ export default function ViewChecklist({dbChecklist})
     const [level, setLevel] = React.useState('Apprentice')
     const [desc, setDesc] = React.useState('')
     const [listItems, setListItems] = React.useState([{index: 0, contentType: 'text', text: ''}])
-    const [checked, setChecked] = React.useState([0]);
+    const [, updateState] = React.useState();
+    const forceUpdate = React.useCallback(() => updateState({}), []);
 
     function printPageArea(areaID){
-      var printContent = document.getElementById(areaID).innerHTML;
-      var originalContent = document.body.innerHTML;
-      document.body.innerHTML = printContent;
+    
       window.print();
-      document.body.innerHTML = originalContent;
-  }
+      
+    }
+
     React.useEffect(() => {
 
       const loadChecklist = () => {
@@ -71,10 +71,10 @@ export default function ViewChecklist({dbChecklist})
 
             if(listItem.contentType == 'text'){
               return (
-                <FormControlLabel control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 32 } }}/>} label={<h3 className='view-page-text'>{listItem.text}</h3>} sx={{fontSize: 24,fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', fontWeight: '900', padding: '.5em', textAlign: 'left'}}/>
+                <FormControlLabel key={listItem.index} control={<Checkbox  sx={{ '& .MuiSvgIcon-root': { fontSize: 32 } }}/>} label={<h3 id ={labelId} className='view-page-text'>{listItem.text}</h3>} sx={{fontSize: 24,fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', fontWeight: '900', padding: '.5em', textAlign: 'left'}}/>
               );
             } else {
-              return <img className='view-page-img' src={"https://storage.googleapis.com/cyber-guardian-images/" + listItem.text} alt={listItem.caption}/>
+              return <img  key={listItem.index} className='view-page-img' src={"https://storage.googleapis.com/cyber-guardian-images/" + listItem.text} alt={listItem.caption}/>
             }
           })}
           </FormGroup>

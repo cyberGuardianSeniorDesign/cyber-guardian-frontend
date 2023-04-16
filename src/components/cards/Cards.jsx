@@ -20,7 +20,7 @@ function Cards() {
     }
     React.useEffect(() => {
         const getContent = async() => {
-            await axios.get("http://localhost:5007/" + 'content')
+            await axios.get(process.env.REACT_APP_BACKEND + 'content')
             .then(res => {
                 console.log(res.data)
                 setLearningPaths(res.data.learningPath)
@@ -96,12 +96,15 @@ function Cards() {
         <div className="carousel-div" >
           <Carousel show={show}>
             {games.map(game => {
+
+                let gameParam = game.title.toLowerCase().replace(/\s+/g,"-");
+                console.log(gameParam)
                 return <CardItem 
                 src={game.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + game.thumbnail : 'images/img-3.jpg'}
                 key={game._id}
                 content={game}
                 text={game.title}
-                path={'/games/' + game._id}
+                path={'/games/' + gameParam}
                 />
               })} 
           </Carousel>

@@ -13,7 +13,7 @@ function Checklists(){
 
     React.useEffect(() => {
         const getChecklists = async() => {
-            await axios.get("http://localhost:5007/" + 'checklists')
+            await axios.get(process.env.REACT_APP_BACKEND + 'checklists')
             .then(res => setChecklists(res.data))
             .then(setLoading(false))
         }

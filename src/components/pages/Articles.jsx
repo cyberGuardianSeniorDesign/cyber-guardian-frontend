@@ -13,7 +13,7 @@ function Articles(){
 
     React.useEffect(() => {
         const getArticles = async() => {
-            await axios.get("http://localhost:5007/" + 'articles')
+            await axios.get(process.env.REACT_APP_BACKEND + 'articles')
             .then(res => setArticles(res.data))
             .then(setLoading(false))
         }

@@ -13,7 +13,7 @@ function LearningPaths(){
 
     React.useEffect(() => {
         const getLearningPaths = async() => {
-            await axios.get("http://localhost:5007/" + 'learning-paths')
+            await axios.get(process.env.REACT_APP_BACKEND + 'learning-paths')
             .then(res => setLearningPaths(res.data))
             .then(setLoading(false))
         }
