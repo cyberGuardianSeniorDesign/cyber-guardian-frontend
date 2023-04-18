@@ -29,8 +29,12 @@ jobs:
             rm -r ~/client/*
             mv -t ~/client/ ~/test/cyber-guardian-frontend/*
             echo 'Moved to correct folder'
-            echo 'Successful deployment to Digital Ocean'
+            cp ~/.env ~/client
+            echo 'Added env file'
             cd ~/client
+            apt-get install -y npm
             npm install --production
             echo 'Successfully installed node modules'
-            
+            npm run production-build
+            pm2 serve build
+            echo 'Successful deployment to Digital Ocean'
