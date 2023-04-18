@@ -13,39 +13,11 @@ import axios from 'axios';
 import ViewArticle from './components/pages/ViewArticle.jsx';
 import ViewChecklist from './components/pages/ViewChecklist.jsx';
 import CrosswordPage from './components/pages/CrosswordPage.jsx';
-
+import GoPhishPage from './components/pages/GoPhishPage.jsx';
 
 
 //test pipeline
 function App(){
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/articles')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/learning-paths')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
-  React.useEffect(() => {
-    const callApi = async() => {
-      await axios.get('http://localhost:5007/checklists')
-      .then(res => console.log(res))
-    }
-
-    callApi()
-  })
-
   return (
     <div>
     <Router>
@@ -61,6 +33,7 @@ function App(){
         <Route path="/checklists/:id" element={<ViewChecklist />} />
         <Route path="/wordsearch" element={<WordSearch />} />
         <Route path="/crosswordpage" element={<CrosswordPage />} />
+        <Route path="/gophishpage" element={<GoPhishPage />} />
       </Routes>
     </Router>
     </div>

@@ -23,7 +23,7 @@ function GameCards() {
                     path='/crosswordpage'
                     />
                     <CardItem 
-                    src='images/img-13.jpg'
+                    src='images/img-15.jpg'
                     text='Can you find all of the hidden words?'
                     label='WORD-SEARCH'
                     path='/wordsearch'
