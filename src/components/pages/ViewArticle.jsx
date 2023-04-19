@@ -17,6 +17,7 @@ export default function ViewArticle({dbArticle})
     const [article, setArticle] = React.useState(dbArticle)
     const [title, setTitle] = React.useState('')
     const [author, setAuthor] = React.useState('')
+    const [date, setDate] = React.useState(null)
     const [level, setLevel] = React.useState('Apprentice')
     const [content, setContent] = React.useState([])
     React.useEffect(() => {
@@ -27,6 +28,7 @@ export default function ViewArticle({dbArticle})
               setTitle(state.content.title)
               setAuthor(state.content.author)
               setLevel(state.content.level)
+              setDate(new Date(state.content.updatedAt))
               window.localStorage.setItem('state', JSON.stringify(state.article))
           } else {
               const data = window.localStorage.getItem('state')
@@ -49,11 +51,16 @@ export default function ViewArticle({dbArticle})
 
     return<div>
       {!loading ? <div className='view-page'> 
+       
         <h1 className='view-page-title'>{article.title}</h1>
+        <div className="content-info">
+          <p className="view-page-info">Written By {author}</p>
+          <p className="view-page-info">Level: {level}</p>
+          <p className="view-page-info">{date.getMonth()}/{date.getDate()}/{date.getFullYear()}</p>
+        </div>
         {article.content.map(content => {
         if(content.contentType == 'text'){
           let html = draftToHtml(JSON.parse(content.raw))
-          console.log(html)
           return <div className="article-text-content" key={content.index}>{parse(html)}</div>
         } else {
           return <div key={content.index} className="view-page-img-div">

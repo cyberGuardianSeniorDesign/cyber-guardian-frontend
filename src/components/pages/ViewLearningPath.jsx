@@ -6,7 +6,7 @@ import Footer from "../Footer"
 
 import CircularProgress from '@mui/material/CircularProgress';
 
-export default function ViewArticle({dbPath})
+export default function ViewLearningPath({dbPath})
 {
     const navigate = useNavigate()
     const { state } = useLocation()
@@ -16,9 +16,11 @@ export default function ViewArticle({dbPath})
     const [author, setAuthor] = React.useState('')
     const [level, setLevel] = React.useState('Apprentice')
     const [content, setContent] = React.useState([])
+    const [description, setDescription] = React.useState('')
     React.useEffect(() => {
       const loadLearningPath = () => {
           if(state != undefined || null){
+            console.log(state)
               setPath(state.content)
               setContent(state.content.content)
               setTitle(state.content.title)
@@ -37,7 +39,7 @@ export default function ViewArticle({dbPath})
       }
 
         loadLearningPath()
-        setLoading(false)
+        setTimeout(() => setLoading(false), 500)
     }, [])
 
     React.useEffect(() => {
@@ -47,7 +49,14 @@ export default function ViewArticle({dbPath})
     return<div>
       {!loading ? <div className='view-page'> 
         <h1 className='view-page-title'>{path.title}</h1>
-        
+        <p className="view-page-description">{path.description}</p>
+        {content.map(data => {
+            return <div className="learning-path-content-div">
+                <h4 className="leaning-path-h4">{data.title}</h4>
+                <img src={"https://storage.googleapis.com/cyber-guardian-images/" + data.thumbnail} alt={`${data.title} thumbnail`}/>
+                <p className="learning-path-content-desc">{data.description}</p>
+            </div>
+        })}
       </div>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
         <Footer/>
     </div>

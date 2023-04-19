@@ -5,6 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 // import CardCarousel from './CardCarousel';
 import './Cards.css';
 import Carousel from "../Carousel.js"
+import { Link } from 'react-router-dom';
 
 import { render } from '@testing-library/react';
 
@@ -20,7 +21,7 @@ function Cards() {
     }
     React.useEffect(() => {
         const getContent = async() => {
-            await axios.get(process.env.REACT_APP_BACKEND + 'content')
+            await axios.get('content')
             .then(res => {
                 console.log(res.data)
                 setLearningPaths(res.data.learningPath)
@@ -70,7 +71,7 @@ function Cards() {
             })} 
     
           </Carousel>
-          <a className="view-all-link" href="https://www.cyberguardian.info/learning-paths">View All</a>
+          <Link className="view-all-link" to="/learning-paths">View All</Link>
         </div>
            
         <h1 className='home-content-h1'>ARTICLES</h1>
@@ -89,7 +90,7 @@ function Cards() {
           })} 
         
         </Carousel>
-          <a className="view-all-link" href="http://localhost:3001/articles">View All</a>
+          <Link className="view-all-link" to="/articles">View All</Link>
         </div>
         <h1 className='home-content-h1'>GAMES</h1>
     
@@ -108,7 +109,7 @@ function Cards() {
                 />
               })} 
           </Carousel>
-          <a className="view-all-link" href="http://localhost:3001/games">View All</a>
+          <Link className="view-all-link" to="/games">View All</Link>
         </div>
     </div>
     : <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}

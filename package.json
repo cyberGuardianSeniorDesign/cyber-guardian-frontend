@@ -56,5 +56,5 @@
     ]
   },
   "type": "module",
-  "proxy": "http://localhost:5007"
+  "proxy": "http://159.89.235.225/"
 }

@@ -5,6 +5,11 @@
     font-family: 'Times New Roman', Times, serif;
   }
   
+  html {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
   .home,
   .learning-paths,
   .articles,
@@ -126,6 +131,7 @@
   
   .view-page-title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
   }
   
   .view-page-description {
@@ -178,6 +184,10 @@
     overflow-x: hidden;
   }
 
+  .article-text-content p {
+    padding: 2.5px;
+  }
+
   .cards__items {
     display: flex;
     justify-content: space-around;
@@ -199,10 +209,64 @@
     padding: 10px 15px;
   }
 
+  .view-page-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #787878;
+    margin-top: -12.5px;
+  }
+
+  .content-info{
+    margin-top: 25px;
+    padding-left: 25px;
+  }
+
+  .no-content-h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .learning-path-content-div {
+    margin: 2em 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  }
+
+  .learning-path-h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  }
+
+  .footer-container {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: none;
+    width: 100vw;
+  }
+
+  .footer-name-logo {
+    display: flex;
+    width: 500px;
+  }
+
+  .footer-link-items {
+  
+  }
+
+  .footer-logo {
+    width: 10vw;
+    max-width: 100px;
+    min-width: 50px;
+    margin: none;
+  }
+
   @media screen and (max-width: 798px) {
   
-    .view-page-h1 {
-      font-size: medium;
+    .view-page-title {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: larger;
     }
 
     .cards__items {
