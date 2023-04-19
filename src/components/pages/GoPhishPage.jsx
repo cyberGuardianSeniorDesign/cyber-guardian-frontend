@@ -61,23 +61,31 @@ function GoPhishPage() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '75vh',
+    height: '60vh',
   }
 
   const cardstyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'lightgray',
-    fontSize: 28,
-    textAlign: 'center'
+    backgroundColor: '#57A0D3',
+    fontSize: 26,
+    textAlign: 'center',
+    fontFamily: "monospace"
   }
 
 
   return (
     
-    <div style={{backgroundColor: 'gray'}}>
-      <p style={{fontSize: "1.5rem" , textAlign: "center"}}>Instructions: Read each card carefully and determine whether it is phishy or not. Click the card to flip over to view the answer.</p>
+    <div style={{backgroundColor: 'white'}}>
+      <p style={{fontSize: "1.5rem" ,
+      textAlign: "center",
+      padding: "10px",
+      margin: "10px",
+      backgroundColor: "#ffde00",
+      display: "inline-block",
+      fontFamily: "monospace"
+      }}>Instructions: Read each card carefully and determine whether it is phishy or not. Click the card to flip it over and view the answer.</p>
       <StyledContainer style={styles}>
       <FlashcardArray 
       frontContentStyle={cardstyles}

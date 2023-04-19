@@ -122,6 +122,15 @@ function CrosswordPage() {
   
     return (
       <div>
+        <p style={{
+            fontSize: "1.5rem" ,
+            textAlign: "center",
+            padding: "10px",
+            margin: "10px",
+            backgroundColor: "#ffde00",
+            display: "inline-block",
+            fontFamily: "monospace"
+            }}> Instructions: Click a clue on the right side of the page. Type in the correct answer that corresponds to the clue. You may also click on the crossword boxes and type directly into them.</p>
         <StyledContainer style={styles}>
         <Crossword data={data} />
         </StyledContainer>
