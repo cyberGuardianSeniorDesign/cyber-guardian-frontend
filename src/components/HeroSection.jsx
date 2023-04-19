@@ -7,7 +7,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'
-        img src='/img/img-home.jpg' >
+        img src='/img/img-19.png' >
         <h1>WELCOME TO CYBER GUARDIAN</h1>
         <p> CYBER AWARENESS & INTERNET SAFETY</p>
         <div className='hero-btns'>

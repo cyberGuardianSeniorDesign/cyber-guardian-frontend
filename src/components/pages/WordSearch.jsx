@@ -10,7 +10,15 @@ import { textAlign } from '@mui/system';
 function WordSearch(){
     return( 
         <div>
-            <p style={{fontSize: "1.5rem" , textAlign: "center"}}>Instructions: Search for the hidden cyber awareness terms. Click the first letter of a word and then the last letter to cross them out.</p>
+            <p style={{
+            fontSize: "1.5rem" ,
+            textAlign: "center",
+            padding: "10px",
+            margin: "10px",
+            backgroundColor: "#ffde00",
+            display: "inline-block",
+            fontFamily: "monospace"
+            }}>Instructions: Search for the hidden cyber awareness terms. Click the first letter of a word and then the last letter to cross them out.</p>
             <Menu />
             <Grid />
             <WordList />
