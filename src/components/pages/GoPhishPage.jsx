@@ -99,3 +99,5 @@ function GoPhishPage() {
 
 
 export default GoPhishPage;
+
+//https://www.egress.com/blog/phishing/spot-the-phish
