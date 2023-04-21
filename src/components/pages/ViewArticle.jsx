@@ -22,7 +22,8 @@ export default function ViewArticle({dbArticle})
     const [content, setContent] = React.useState([])
     React.useEffect(() => {
       const loadArticle = () => {
-          if(state != undefined || null){
+          if(state != undefined || null && state.content.content != undefined || null){
+            console.log(state)
               setArticle(state.content)
               setContent(state.content.content)
               setTitle(state.content.title)

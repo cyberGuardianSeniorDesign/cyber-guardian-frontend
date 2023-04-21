@@ -43,6 +43,16 @@
   .carousel-div{
     margin-bottom: 5em;
   }
+
+  .navigate-button {
+    color:#878787;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+  }
   
   .view-all-link {
     color:#878787;

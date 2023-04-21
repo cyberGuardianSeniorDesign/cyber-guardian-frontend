@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import axios from 'axios'
 import { Typography } from "@mui/material"
-import { useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import Footer from "../Footer"
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -17,15 +17,41 @@ export default function ViewLearningPath({dbPath})
     const [level, setLevel] = React.useState('Apprentice')
     const [content, setContent] = React.useState([])
     const [description, setDescription] = React.useState('')
+    let contentState 
+    const renavigate = async(contentType, objectId, data) => {
+        let param1;
+
+        switch(contentType){
+            case 'article':
+                param1 = 'articles/';
+                break;
+            case 'checklist':
+                param1 = 'checklists/';
+                break;
+            default:
+                param1 = 'articles/'
+                break;
+        }
+        
+        await axios.get(process.env.REACT_APP_BACKEND + param1 + objectId)
+        .then(res => () => {
+            contentState= res.data
+        })
+        .catch(err => console.log(err))
+        console.log(data)
+        navigate('/../../' + contentType + 's/' + objectId, {state: {content: data}} )
+
+        
+    }
     React.useEffect(() => {
       const loadLearningPath = () => {
           if(state != undefined || null){
-            console.log(state)
               setPath(state.content)
               setContent(state.content.content)
               setTitle(state.content.title)
               setAuthor(state.content.author)
               setLevel(state.content.level)
+
               window.localStorage.setItem('state', JSON.stringify(state.learningPath))
           } else {
               const data = window.localStorage.getItem('state')
@@ -55,7 +81,7 @@ export default function ViewLearningPath({dbPath})
                 <h5 className="learning-path-h4">{data.title}</h5>
                 <center><img className="lp-img" src={"https://storage.googleapis.com/cyber-guardian-images/" + data.img} alt={`${data.title} thumbnail`}/></center>
                 <p className="learning-path-content-desc">{data.description}</p>
-                <a className="view-all-link" href={data.link}>Click here to check it out!</a>
+                <button className="navigate-button" onClick={() => renavigate(data.contentType, data.link, data.data)} >Click here to check it out!</button>
             </div>
         })}
       </div>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
