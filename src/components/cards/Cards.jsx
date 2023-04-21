@@ -77,8 +77,8 @@ function Cards() {
         <h1 className='home-content-h1'>ARTICLES</h1>
         <div className="carousel-div">
          
-        <Carousel show={show}>
-          {articles.map(article => {
+        <Carousel show={3}>
+          {articles.slice(0,3).map(article => {
             return <CardItem 
             src={article.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + article.thumbnail : 'images/img-3.jpg'}
             key={article._id}
