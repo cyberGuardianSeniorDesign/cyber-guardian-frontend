@@ -52,9 +52,10 @@ export default function ViewLearningPath({dbPath})
         <p className="view-page-description">{path.description}</p>
         {content.map(data => {
             return <div className="learning-path-content-div">
-                <h4 className="leaning-path-h4">{data.title}</h4>
-                <img src={"https://storage.googleapis.com/cyber-guardian-images/" + data.thumbnail} alt={`${data.title} thumbnail`}/>
+                <h5 className="learning-path-h4">{data.title}</h5>
+                <center><img className="lp-img" src={"https://storage.googleapis.com/cyber-guardian-images/" + data.img} alt={`${data.title} thumbnail`}/></center>
                 <p className="learning-path-content-desc">{data.description}</p>
+                <a className="view-all-link" href={data.link}>Click here to check it out!</a>
             </div>
         })}
       </div>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}

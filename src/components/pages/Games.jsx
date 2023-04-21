@@ -11,7 +11,7 @@ function Games(){
 
     React.useEffect(() => {
         const getGames = async() => {
-            await axios.get("games")
+            await axios.get(process.env.REACT_APP_BACKEND + "games")
             .then(res => setGames(res.data))
             .then(setTimeout(() => setLoading(false), 500))
         }
@@ -22,7 +22,10 @@ function Games(){
     return( 
         <>
             { !loading ?
-            <div>{games.map(game => {
+            <div>
+                 <h1 className='content-h1'>Games</h1>
+                <p className='content-description'>Looking for something more interactive? Gain famliarity with cyber security terms and concepts with a game.</p>
+            <div className='cards__items'>{games.map(game => {
 
                 let gameParam = game.title.toLowerCase().replace(/\s+/g,"-");
                 console.log(gameParam)
@@ -34,7 +37,7 @@ function Games(){
                 path={'/games/' + gameParam}
                 />
                 })}
-            </div>: <CircularProgress/>
+            </div> </div>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>
             }
             <Footer />
         </>

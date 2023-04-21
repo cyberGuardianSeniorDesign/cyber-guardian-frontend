@@ -31,11 +31,12 @@ function Checklists(){
 
     return( 
         <>
-        <h1 className='content-h1'>Checklists</h1>
-        <p className='content-description'>Knowing what to do to keep you and your devices safe can be hard to keep track of. These checklists are made to outline the steps recommended to prevent yourself from being vulnerable to cyber attacks.</p>
+        
         
             {!loading ? 
             <div >
+                <h1 className='content-h1'>Checklists</h1>
+                <p className='content-description'>Knowing what to do to keep you and your devices safe can be hard to keep track of. These checklists are made to outline the steps recommended to prevent yourself from being vulnerable to cyber attacks.</p>
                 <FormControl sx={{ minWidth: 100, margin: '1em', marginLeft: '8em'}}>
                     <InputLabel id="demo-simple-select-label" >Level</InputLabel>
                     <Select

@@ -21,7 +21,7 @@ function Cards() {
     }
     React.useEffect(() => {
         const getContent = async() => {
-            await axios.get('content')
+            await axios.get(process.env.REACT_APP_BACKEND + 'content')
             .then(res => {
                 console.log(res.data)
                 setLearningPaths(res.data.learningPath)
