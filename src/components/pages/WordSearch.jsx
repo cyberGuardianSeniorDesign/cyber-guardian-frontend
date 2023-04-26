@@ -20,7 +20,15 @@ function WordSearch(){
             fontFamily: "monospace"
             }}>Instructions: Search for the hidden cyber awareness terms. Click the first letter of a word and then the last letter to cross them out.</p>
             <Menu />
-            <Grid />
+            <Grid style={{
+            fontSize: "1.5rem" ,
+            textAlign: "center",
+            padding: "10px",
+            margin: "10px",
+            backgroundColor: "#ffde00",
+            display: "inline-block",
+            fontFamily: "monospace"
+            }}/>
             <WordList />
             <Footer />
         </div>

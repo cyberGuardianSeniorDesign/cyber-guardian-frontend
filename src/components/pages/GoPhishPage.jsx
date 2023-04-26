@@ -20,8 +20,8 @@ function GoPhishPage() {
     },
     {
       id: 3,
-      frontHTML: <></>,
-      backHTML: <></>,
+      frontHTML: <>Hi, I need an urgent refund made to a new client or we are going to lose the deal. Please transfer $20k to their business account: Account Number: 5432456543421 Routing: 490683750. I'm stuck out of office in meetings so only have my cell on me - make sure you email me directly once it it's done. Thanks, John COO </>,
+      backHTML: <>PHISHY: It contains all the classic signs of CEO fraud: urgency, leveraging seniority, breaking protocol, confidentiality, and a ‘mystery’ client.</>,
     },
     {
       id: 4,
