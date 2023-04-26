@@ -6,7 +6,7 @@ video {
     z-index: -1;
 }
 
-.hero-container {
+.intro-container {
     background-image: url('images/img-home01.png');
     height: 100vh;
     width: 100%;
@@ -18,29 +18,17 @@ video {
     object-fit:fill;
 }
 
-.hero-container > h1 {
+.intro-container > h1 {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 100px;
     margin-top: -100px;
 }
 
-.hero-container > p {
+.intro-container > p {
     margin-top: 8px;
     color: white;
     font-size: 32px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.hero-btns {
-    margin-top: 32px;
-    color:#fff;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.hero-btns .btn {
-    margin: 6px;
-    color:#fff;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -49,28 +37,19 @@ video {
 }
 
 @media screen and (max-width: 960px) {
-    .hero-container > h1 {
+    .intro-container > h1 {
         font-size: 70px;
         margin-top: -150px;
     }
 }
 
 @media screen and (max-width: 770px){
-    .hero-container > h1 {
+    .intro-container > h1 {
         font-size: 50px;
         margin-top: -100px;
     }
 
-    .hero-container > p{
+    .intro-container > p{
         font-size: 30px;
-    }
-
-    .btn-mobile{
-        display: block;
-        text-decoration: none;
-    }
-
-    .btn{
-        width: 100%;
     }
 }

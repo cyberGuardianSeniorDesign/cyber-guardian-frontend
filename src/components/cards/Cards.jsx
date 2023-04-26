@@ -53,7 +53,7 @@ function Cards() {
   return (
   <>
     {!loading ?
-    <div className='cards'>
+    <div className='cards' data-cy='cards'>
        
         <h1 className='home-content-h1'>LEARNING PATHS</h1>
         

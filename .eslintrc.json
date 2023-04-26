@@ -1,0 +1,16 @@
+{
+  "plugins": ["cypress"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["plugin:cypress/recommended"],
+  "rules": {
+      "jest/expect-expect": "off"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

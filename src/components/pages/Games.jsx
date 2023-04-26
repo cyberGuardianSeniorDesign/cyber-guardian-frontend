@@ -4,7 +4,7 @@ import Footer from '../Footer';
 import axios from 'axios';
 import CardItem from '../cards/CardItem';
 import CircularProgress from '@mui/material/CircularProgress';
-
+//
 function Games(){
     const [loading, setLoading] = React.useState(true)
     const [games, setGames] = React.useState([])

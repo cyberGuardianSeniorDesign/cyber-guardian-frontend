@@ -5,7 +5,7 @@ import logo from './images/logo.png'
 
 function Footer() {
   return (
-    <div className='footer-div'>
+    <div className='footer-div' data-cy='footer'>
         <div className="footer-name-logo">
             <img className='footer-logo' src={logo} alt='logo' />
             <h2 className='footer-header'>Cyber Guardian</h2>

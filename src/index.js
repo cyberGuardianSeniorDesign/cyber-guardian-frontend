@@ -9,15 +9,16 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './components/Games/WordSearch/registerServiceWorker.js';
 import reducer from './components/Games/WordSearch/reducers.js'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { BrowserRouter } from 'react-router-dom';
 
 let store = createStore(reducer);
 
 const root = createRoot(document.getElementById('root'));
 root.render(
    <React.StrictMode>
-    <Provider store={store}>
-        <App />
-     </Provider>
+         <Provider store={store}>
+            <App />
+         </Provider>
    </React.StrictMode>
 );
 

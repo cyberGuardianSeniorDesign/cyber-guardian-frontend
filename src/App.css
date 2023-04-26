@@ -40,6 +40,23 @@
     text-align: left;
   }
 
+  .intro-div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+  }
+
+  .intro-div-col {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .intro-div h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2em 1em 1em 1em;
+  }
+
   .carousel-div{
     margin-bottom: 5em;
   }
