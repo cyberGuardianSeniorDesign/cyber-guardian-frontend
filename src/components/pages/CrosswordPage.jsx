@@ -131,9 +131,9 @@ function CrosswordPage() {
             display: "inline-block",
             fontFamily: "Verdana"
             }}> Instructions: Click a clue on the right side of the page. Type in the correct answer that corresponds to the clue. You may also click on the crossword boxes and type directly into them.</p>
-        <div>
-        <Crossword data={data} />
-       </div>
+        <div className='crossword-div'>
+          <Crossword data={data} />
+        </div>
         <Footer />
       </div>
     );

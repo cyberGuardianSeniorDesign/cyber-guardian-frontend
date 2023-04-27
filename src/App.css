@@ -44,6 +44,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 2em;
+    padding: 2em 2em 0em 2em;
   }
 
   .intro-div-col {
@@ -52,9 +53,22 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+  .intro-div-p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 1em 2em;
+  }
+
   .intro-div h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 2em 1em 1em 1em;
+    margin: 3em 1em 1em 1em;
+  }
+
+  .intro-div-img {
+    padding: 1em 3em .25em 2em;
+    width: 33vw;
+    min-width: 250px;
   }
 
   .carousel-div{
@@ -213,6 +227,13 @@
 
   .article-text-content p {
     padding: 2.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    line-height: 35px;
+  }
+
+  .article-text-content strong {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .cards__items {
@@ -290,6 +311,7 @@
     justify-content: flex-start;
     width: 30%;
     min-width: 200px;
+    margin: 10px;
     align-items: center;
   }
 
@@ -312,11 +334,28 @@
   }
 
   .footer-logo {
-    width: 10vw;
+    width: 4vw;
+    margin-right: 5px;
     max-width: 75px;
     min-width: 50px;
     margin: none;
   } 
+
+  .crossword-div {
+    padding: 2em;
+    display: flex;
+  }
+
+  .crossword {
+    width: 60vw !important; 
+    margin: 0 auto;
+    min-width: 500px;
+  }
+
+  .grid-div {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   @media screen and (max-width: 798px) {
   
@@ -330,4 +369,19 @@
       align-items: center;
     }
 
+  }
+
+  @media screen and (max-width: 700px) {
+  
+    
+    .intro-div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em;
+      padding: 2em 2em 0em 2em;
+    }
+
+    .intro-div-img{
+      align-self: center;
+    }
   }
