@@ -25,12 +25,12 @@ function GoPhishPage() {
     },
     {
       id: 4,
-      frontHTML: <></>,
+      frontHTML: <>This is an important message. The Internal</>,
       backHTML: <></>,
     },
     {
       id: 5,
-      frontHTML: <></>,
+      frontCardStyle: <img src="img-15.jpg" alt="error" />,
       backHTML: <></>,
     },
     {
