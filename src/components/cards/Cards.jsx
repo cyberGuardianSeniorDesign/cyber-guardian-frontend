@@ -55,10 +55,10 @@ function Cards() {
     {!loading ?
     <div className='cards' data-cy='cards'>
        
-        <h1 className='home-content-h1'>LEARNING PATHS</h1>
+        <h1 className='home-content-h1'>Learning Paths</h1>
         
-        <div className="carousel-div" >
-          <Carousel show={show}>
+        <div className="carousel-div" > 
+          <div className='cards-div'>
             {learningPaths.map(path => {
               return <CardItem 
               src={path.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + path.thumbnail : 'images/img-3.jpg'}
@@ -69,15 +69,12 @@ function Cards() {
               path={'/learning-paths/' + path._id}
               />
             })} 
-    
-          </Carousel>
-          <Link className="view-all-link" to="/learning-paths">View All</Link>
+          </div>
         </div>
            
-        <h1 className='home-content-h1'>ARTICLES</h1>
+        <h1 className='home-content-h1'>Recent Articles</h1>
         <div className="carousel-div">
-         
-        <Carousel show={3}>
+          <div className='cards-div'>
           {articles.slice(0,3).map(article => {
             return <CardItem 
             src={article.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + article.thumbnail : 'images/img-3.jpg'}
@@ -88,14 +85,14 @@ function Cards() {
             path={'/articles/' + article._id}
             />
           })} 
+          </div>
         
-        </Carousel>
           <Link className="view-all-link" to="/articles">View All</Link>
         </div>
-        <h1 className='home-content-h1'>GAMES</h1>
+        <h1 className='home-content-h1'>Games</h1>
     
         <div className="carousel-div" >
-          <Carousel show={show}>
+          <div className='cards-div'>
             {games.map(game => {
 
                 let gameParam = game.title.toLowerCase().replace(/\s+/g,"-");
@@ -108,7 +105,7 @@ function Cards() {
                 path={'/games/' + gameParam}
                 />
               })} 
-          </Carousel>
+            </div>
           <Link className="view-all-link" to="/games">View All</Link>
         </div>
     </div>

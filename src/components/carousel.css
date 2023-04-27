@@ -21,10 +21,14 @@
 .carousel-content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     transition: all 250ms linear;
     -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
     scrollbar-width: none;  /* hide scrollbar in Firefox */
+}
+
+.carousel-content > * {
+    margin: 50px !important;
 }
 
 /* hide scrollbar in webkit browser */

@@ -22,12 +22,16 @@
     color: #fff;
     font-family: 'Times New Roman', Times, serif;
     justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
+    margin-left: 25px;
+    cursor: default;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
+  }
+
+  .navbar-log:hover {
+    color: #fff !important;
   }
   
   .fa-typo3 {

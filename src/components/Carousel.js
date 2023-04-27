@@ -2,7 +2,7 @@ import React from 'react'
 import './carousel.css' //will be added later
 
 const Carousel = (props) => {
-    const {children, show} = props
+    const {children} = props
     const [currentIndex, setCurrentIndex] = React.useState(0)
     const [length, setLength] = React.useState(children.length)
     const [touchPosition, setTouchPosition] = React.useState(null)
@@ -33,7 +33,7 @@ const Carousel = (props) => {
         setTouchPosition(null)
     }
     const next = () => {
-        if (currentIndex < (length - show)) {
+        if (currentIndex < (length)) {
             setCurrentIndex(prevState => prevState + 1)
         }
     }
@@ -51,7 +51,6 @@ const Carousel = (props) => {
 
     return (
         <div className="carousel-container">
-            {console.log(show)}
             <div className="carousel-wrapper">
                 {/* You can alwas change the content of the button to other things */}
                 {
@@ -61,18 +60,16 @@ const Carousel = (props) => {
                     </button>
                 }
                 <div className="carousel-content-wrapper" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-                    <div  className={`carousel-content show-${show}`}
-                    style={{ transform: `translateX(-${currentIndex * (100 / show)}%)`,  }}>
+                    <div  className={`carousel-content`}>
                         <div
                             className="carousel-content"
-                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             {children}
                         </div>
                     </div>
                 </div>
                 {
-                    currentIndex < (length - show) &&
+                    currentIndex < (length) &&
                     <button onClick={next} className="right-arrow">
                         &gt;
                     </button>

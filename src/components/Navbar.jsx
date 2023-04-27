@@ -30,9 +30,9 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            <p className='navbar-logo' >
                 CYBER GUARDIAN <i className='fab fa-typo3' />
-            </Link>
+            </p>
              <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
