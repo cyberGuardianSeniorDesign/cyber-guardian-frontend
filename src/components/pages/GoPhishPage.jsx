@@ -25,23 +25,53 @@ function GoPhishPage() {
     },
     {
       id: 4,
-      frontHTML: <>This is an important message. The Internal</>,
-      backHTML: <></>,
+      frontHTML: <>This is an important message. The Internal Revenue Service wishes to inform you that the IRS have started accepting tax return and you have been advised to Attach you current W-2 form in repsonse to this email to update our record as we prepare for 2023 TAX update. Internal Revenue Service United States</>,
+      backHTML: <>PHISHY: Impersonating the IRS is another common email phishing scam tactic. You may, for instance, receive a fake IRS email asking you to send money or personal information. Typically, there is a sense of urgency to the subject line. Scammers hope that you won't verify the email’s authenticity since it comes from a government agency.</>,
     },
     {
       id: 5,
-      frontCardStyle: <img src="img-15.jpg" alt="error" />,
-      backHTML: <></>,
+      frontHTML: <>Hello
+
+      This is to inform you that we have found suspicious activities with your account.Due to that, we have terminated your windows account.
+      
+      If you think this was a mistake and you wish to continue using this windows license key, Please contact con
+      
+      technical support at 1-800-341-8835.
+      
+      PS NOTE: Please be at your computer while you call consumer technical support
+      
+      Windows Help 1-800-341-8835.</>,
+      backHTML: <>PHISHY: Big companies prioritize email security and will prevent you from signing in without your permission. When the company notices a login attempt from a new device or location, you'll receive an email to confirm it was you. Fraudsters send versions of these emails to trick you into giving them sensitive information. </>,
     },
     {
       id: 6,
-      frontHTML: <></>,
-      backHTML: <></>,
+      frontHTML: <>Credit Card Billing Fail
+
+      We were unable to authorize your credit card payment for your website
+      
+      WEBSITE:
+      
+      Squarespace.com
+      
+      YOUR PLAN:
+      
+      $18.00-Business
+      
+      To keep your site online, please update your billing information in the Billing panel in the next three days. 
+      
+      UPDATE MY BILLING
+      
+      if you have any questions, our award-winning Customer Care Team is
+      
+      available 24/7 at support.squarespace.com</>,
+      backHTML: <>PHISHY: Typically, these scams come from companies with large user bases. Squarespace powers a lot of websites; so if you get an email from them, you're more likely to take action. These emails state that your account will be suspended if you don't update your billing information. Phishers use urgency to persuade you to click on a phishing link. Because you trust the Squarespace domain name, you likely won't check if the email is legitimate. </>,
     },
     {
       id: 7,
-      frontHTML: <></>,
-      backHTML: <></>,
+      frontHTML: <>Sheila V [a person you do not know] has shared a document on Google Docs with you. Sheila V has invited you to view the following document: Open in Docs</>,
+      backHTML: <>PHISHY: ‍In May 2017, a phishing scam known as "the Google Docs worm" spread across the internet, causing havoc for users [*]. Fraudsters stole emails and contact lists from Gmail accounts by impersonating Google Docs through special web apps. This method worked because people believed that the requests came from their friends. 
+
+      When recipients granted access, the scam email would automatically be sent to their contacts.</>,
     },
   ];
 
@@ -69,7 +99,7 @@ function GoPhishPage() {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#57A0D3',
-    fontSize: 26,
+    fontSize: 20,
     textAlign: 'center',
     fontFamily: "monospace"
   }
