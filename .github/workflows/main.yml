@@ -1,0 +1,7 @@
+
+steps:
+  - name: 'Dastardly Scan Action1'
+    uses: PortSwigger/dastardly-github-action@v1.0.0
+    continue-on-error: true                        # This allows subsequent steps to run even if this step fails
+    with:
+      target-url: 'https://cyberguardian.info'
