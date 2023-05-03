@@ -81,6 +81,10 @@
     flex-wrap: wrap;
   }
 
+  .cards_item {
+    margin: 1.5em;
+  }
+
   .navigate-button {
     color:#878787;
     background-color: transparent;
@@ -243,12 +247,15 @@
   }
 
   .cards__items {
+    width:fit-content;
+    margin: 1.5em auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: end;
     flex-wrap: wrap;
-    margin: 24px;
-    margin-bottom: 3em;
   }
+
+ 
 
   .dark-btn {
     background-color:#1f1f28 ;
@@ -362,7 +369,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 1em;
+    margin: 2em !important;
+    padding: 1em;
   }
 
   @media screen and (max-width: 798px) {

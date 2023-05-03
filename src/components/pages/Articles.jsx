@@ -10,7 +10,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
+import '../../../node_modules/flexboxgrid/css/flexboxgrid.css'
 
 function Articles(){
     const [articles, setArticles] = React.useState([])
@@ -54,7 +54,7 @@ function Articles(){
                              <MenuItem value={'Expert'}>Expert</MenuItem>
                          </Select>
                     </FormControl>
-                    <div >
+                    <div className='cards_items_wrapper'>
                     
                         {levelFilter != 'Any' ? 
                         <div className='cards__items'> {articles.filter(article=> article.level == levelFilter).map(article => {

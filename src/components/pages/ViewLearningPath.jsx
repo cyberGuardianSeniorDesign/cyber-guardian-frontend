@@ -38,7 +38,7 @@ export default function ViewLearningPath({dbPath})
             contentState= res.data
         })
         .catch(err => console.log(err))
-        console.log(data)
+        
         navigate('/../../' + contentType + 's/' + objectId, {state: {content: data}} )
 
         

@@ -1,9 +1,11 @@
 import React from 'react';
 import '../../App.css';
+import axios from 'axios';
 import Footer from '../Footer';
 import Crossword from '@jaredreisinger/react-crossword';
 import styled, { ThemeProvider } from 'styled-components';
 import { columnBreakpoint } from '@jaredreisinger/react-crossword'
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 const data = {
@@ -119,24 +121,42 @@ const data = {
   }
 
 function CrosswordPage() {
-  
+  const [loading, setLoading] = React.useState(true)
+    const [games, setGames] = React.useState([])
+
+    React.useEffect(() => {
+        const getGames = async() => {
+            await axios.get(process.env.REACT_APP_BACKEND + "games")
+            .then(res => setGames(res.data))
+            .then(setTimeout(() => setLoading(false), 500))
+        }
+
+        getGames()
+    }, [])
+
     return (
-      <div>
-        <p style={{
-            fontSize: "1.0rem" ,
-            textAlign: "center",
-            padding: "10px",
-            margin: "10px",
-            backgroundColor: "#ffde00",
-            display: "inline-block",
-            fontFamily: "Verdana"
-            }}> Instructions: Click a clue on the right side of the page. Type in the correct answer that corresponds to the clue. You may also click on the crossword boxes and type directly into them.</p>
-        <div className='crossword-div'>
-          <Crossword data={data} />
-        </div>
-        <Footer />
-      </div>
-    );
+      <>
+        {!loading ? 
+        <>
+        {games.filter(game => game.title == 'Crossword Puzzle')[0].running ?
+          <div>
+            <p style={{
+                fontSize: "1.0rem" ,
+                textAlign: "center",
+                padding: "10px",
+                margin: "10px",
+                backgroundColor: "#ffde00",
+                display: "inline-block",
+                fontFamily: "Verdana"
+                }}> Instructions: Click a clue on the right side of the page. Type in the correct answer that corresponds to the clue. You may also click on the crossword boxes and type directly into them.</p>
+          
+            <div className='crossword-div'>
+              <Crossword data={data} />
+            </div>
+            <Footer />
+          </div>:<h3 className='no-content-h3'>Paige Not Available</h3>} 
+      </> : <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>}
+    </>);
 }
 
 

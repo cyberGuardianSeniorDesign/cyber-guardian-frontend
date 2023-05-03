@@ -1,12 +1,17 @@
 import React from 'react';
 import '../../App.css';
+import axios from 'axios';
 import { FlashcardArray } from "react-quizlet-flashcard";
 import Footer from '../Footer';
 import styled, { ThemeProvider } from 'styled-components';
-
-
+import CircularProgress from '@mui/material/CircularProgress';
 
 function GoPhishPage() {
+  const [loading, setLoading] = React.useState(true)
+    const [games, setGames] = React.useState([])
+
+    
+
   const cards = [
     {
       id: 1,
@@ -74,26 +79,40 @@ function GoPhishPage() {
     fontFamily: "monospace"
   }
 
+  React.useEffect(() => {
+    const getGames = async() => {
+        await axios.get(process.env.REACT_APP_BACKEND + "games")
+        .then(res => setGames(res.data))
+        .then(setTimeout(() => setLoading(false), 500))
+    }
+
+    getGames()
+  }, [])
 
   return (
-    
-    <div style={{backgroundColor: 'white'}}>
-      <p style={{fontSize: "1.5rem" ,
-      textAlign: "center",
-      padding: "10px",
-      margin: "10px",
-      backgroundColor: "#ffde00",
-      display: "inline-block",
-      fontFamily: "monospace"
-      }}>Instructions: Read each card carefully and determine whether it is phishy or not. Click the card to flip it over and view the answer.</p>
-      <StyledContainer style={styles}>
-      <FlashcardArray 
-      frontContentStyle={cardstyles}
-      backContentStyle={cardstyles}
-      cards={cards} />
-      </StyledContainer>
-      <Footer />
-    </div>
+    <>
+    {!loading ?
+    <>
+    {games.filter(game => game.title == 'Go Phish')[0].running ?
+        <div style={{backgroundColor: 'white'}}>
+          <p style={{fontSize: "1.5rem" ,
+          textAlign: "center",
+          padding: "10px",
+          margin: "10px",
+          backgroundColor: "#ffde00",
+          display: "inline-block",
+          fontFamily: "monospace"
+          }}>Instructions: Read each card carefully and determine whether it is phishy or not. Click the card to flip it over and view the answer.</p>
+          <StyledContainer style={styles}>
+          <FlashcardArray 
+          frontContentStyle={cardstyles}
+          backContentStyle={cardstyles}
+          cards={cards} />
+          </StyledContainer>
+          <Footer />
+        </div>:<h3 className='no-content-h3'>Paige Not Available</h3>}</>: <div className="loading-div"><CircularProgress color="inherit" sx={{position: 'relative', top: '40%', left: '47%'}}/></div>
+      }
+    </>
   );
 }
 
