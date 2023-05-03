@@ -49,8 +49,8 @@ function Articles(){
                          label="Level"
                          >
                              <MenuItem value={'Any'}>Any</MenuItem>
-                             <MenuItem value={'Apprentice'}>Apprentice</MenuItem>
                              <MenuItem value={'Novice'}>Novice</MenuItem>
+                             <MenuItem value={'Apprentice'}>Apprentice</MenuItem>
                              <MenuItem value={'Expert'}>Expert</MenuItem>
                          </Select>
                     </FormControl>
