@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import '../../App.css';
 import axios from 'axios';
 import Menu from '../Games/WordSearch/Menu/Menu.js';

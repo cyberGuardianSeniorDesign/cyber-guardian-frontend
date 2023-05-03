@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import axios from 'axios'
-import { Typography } from "@mui/material"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import Footer from "../Footer"
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -38,7 +37,7 @@ export default function ViewLearningPath({dbPath})
             contentState= res.data
         })
         .catch(err => console.log(err))
-        
+
         navigate('/../../' + contentType + 's/' + objectId, {state: {content: data}} )
 
         

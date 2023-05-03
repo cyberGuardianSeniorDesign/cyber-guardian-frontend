@@ -1,11 +1,7 @@
 import React, { useEffect } from "react"
-import axios from 'axios'
-import { Typography } from "@mui/material"
 import { useLocation, useNavigate } from "react-router-dom"
 import Footer from "../Footer"
 import draftToHtml from 'draftjs-to-html';
-//import { EditorState, convertToRaw, convertFromRaw, ContentState  } from "draft-js";
-// import ReactHtmlParser from 'react-html-parser'; 
 import parse from 'html-react-parser';
 import CircularProgress from '@mui/material/CircularProgress';
 

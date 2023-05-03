@@ -2,12 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import CardItem from './CardItem';
 import CircularProgress from '@mui/material/CircularProgress';
-// import CardCarousel from './CardCarousel';
 import './Cards.css';
-import Carousel from "../Carousel.js"
 import { Link } from 'react-router-dom';
 
-import { render } from '@testing-library/react';
 
 function Cards() {
   const [loading, setLoading] = React.useState(true)

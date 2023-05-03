@@ -3,7 +3,6 @@ import React from 'react';
 import '../../App.css';
 import Footer from '../Footer';
 import CardItem from '../cards/CardItem';
-// import CardCarousel from './CardCarousel';
 import '../cards/Cards.css';
 import CircularProgress from '@mui/material/CircularProgress';
 

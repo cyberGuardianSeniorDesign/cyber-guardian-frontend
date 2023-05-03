@@ -3,7 +3,7 @@ import '../../App.css';
 import axios from 'axios';
 import { FlashcardArray } from "react-quizlet-flashcard";
 import Footer from '../Footer';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function GoPhishPage() {

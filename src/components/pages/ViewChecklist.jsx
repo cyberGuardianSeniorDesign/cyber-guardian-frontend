@@ -1,6 +1,4 @@
 import React, { useEffect } from "react"
-import axios from 'axios'
-import { Typography } from "@mui/material"
 import { useNavigate, useLocation } from "react-router-dom"
 import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
