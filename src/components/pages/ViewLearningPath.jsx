@@ -32,12 +32,6 @@ export default function ViewLearningPath({dbPath})
                 break;
         }
         
-        await axios.get(process.env.REACT_APP_BACKEND + param1 + objectId)
-        .then(res => () => {
-            contentState= res.data
-        })
-        .catch(err => console.log(err))
-
         navigate('/../../' + contentType + 's/' + objectId, {state: {content: data}} )
 
         

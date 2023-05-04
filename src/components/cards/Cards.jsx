@@ -56,7 +56,17 @@ function Cards() {
         
         <div className="carousel-div" > 
           <div className='cards-div'>
-            {learningPaths.map(path => {
+            {learningPaths.filter(path => path.level == "Novice").map(path => {
+              return <CardItem 
+              src={path.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + path.thumbnail : 'images/img-3.jpg'}
+              key={path._id}
+              content={path}
+              text={path.title}
+              label={path.level}
+              path={'/learning-paths/' + path._id}
+              />
+            })} 
+            {learningPaths.filter(path => path.level == "Apprentice").map(path => {
               return <CardItem 
               src={path.thumbnail ? "https://storage.googleapis.com/cyber-guardian-images/" + path.thumbnail : 'images/img-3.jpg'}
               key={path._id}
