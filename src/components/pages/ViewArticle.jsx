@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import Footer from "../Footer"
 import draftToHtml from 'draftjs-to-html';
@@ -30,15 +30,13 @@ export default function ViewArticle({dbArticle})
               const data = window.localStorage.getItem('state')
               if(data != undefined || null)
               {
-                  //verifyToken(data._id)
-                  setArticle(JSON.parse(data))
-
+                setArticle(JSON.parse(data))
               } 
           }
       }
 
         loadArticle()
-        setLoading(false)
+        setTimeout(() => setLoading(false), 300)
     }, [])
 
     React.useEffect(() => {

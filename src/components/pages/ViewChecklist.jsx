@@ -46,9 +46,9 @@ export default function ViewChecklist({dbChecklist})
               } 
           }
       }
-
-      setLoading(false)
+      
       loadChecklist()
+      setTimeout(() => setLoading(false), 300)
   }, [])
 
   React.useEffect(() => {
